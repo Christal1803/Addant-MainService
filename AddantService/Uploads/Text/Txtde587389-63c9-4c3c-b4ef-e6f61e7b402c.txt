@@ -1,0 +1,65 @@
+{
+    "BasicJson": {
+        "Status": 0,
+        "Type": "6",
+        "Egm": "5713",
+        "GamingDate": "2022-10-13",
+        "Meter": {
+            "0": {
+                "33": {
+                    "Before": 0,
+                    "After": 7,
+                    "Status": 0
+                },
+                "47": {
+                    "Before": 6,
+                    "After": 100,
+                    "Status": 0
+                }
+            }
+        },
+        "IdMeterInput": null,
+        "User": "07e385cb-8e44-4159-a38f-08a818d263fb"
+    },
+    "IdMeterInputType": "6",
+    "AssetNumber": "10015",
+    "Location": "10015",
+    "IdCasino": "6",
+    "GamingDate": "2022-10-13",
+    "IsSpecialEvents": true
+}
+
+
+
+
+
+{
+  "BasicJson": {
+    "Status": 0,
+    "Type": "6",
+    "Egm": "5713",
+    "GamingDate": "2022-10-13",
+    "Meter": {
+      "0": {
+        "33": {
+          "Before": 0,
+          "After": 7,
+          "Status": 0
+        },
+        "47": {
+          "Before": 6,
+          "After": 100,
+          "Status": 0
+        }
+      }
+    },
+    "IdMeterInput": null,
+    "User": "07e385cb-8e44-4159-a38f-08a818d263fb"
+  },
+  "IdMeterInputType": "6",
+  "AssetNumber": "10015",
+  "Location": "10015",
+  "IdCasino": "6",
+  "GamingDate": "2022-10-13",
+  "IsSpecialEvents": true
+}

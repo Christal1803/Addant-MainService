@@ -1,0 +1,44 @@
+19-04-2023 13:21:56: Inside GetAllPostion()
+19-04-2023 13:23:26: Inside GetAllPostion()
+19-04-2023 14:09:46: GetP12Credential case 1 from   C:\AddantServiceNew\AddantService\AddantService\Log\adddantwebsite-86b8d564d794.p12 addant@adddantwebsite.iam.gserviceaccount.com
+19-04-2023 14:09:47: Credential-CN=111349114374532349253
+19-04-2023 14:09:47: Inside GetP12Credential exInvalid provider type specified.
+
+19-04-2023 14:09:47: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+19-04-2023 14:09:48: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+19-04-2023 14:10:24: GetP12Credential case 1 from   C:\AddantServiceNew\AddantService\AddantService\Log\adddantwebsite-86b8d564d794.p12 addant@adddantwebsite.iam.gserviceaccount.com
+19-04-2023 14:10:24: Credential-CN=111349114374532349253
+19-04-2023 14:10:24: Inside GetP12Credential exInvalid provider type specified.
+
+19-04-2023 14:10:24: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+19-04-2023 14:10:25: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+19-04-2023 14:27:57: GetP12Credential case 1 from   C:\AddantServiceNew\AddantService\AddantService\Log\adddantwebsite-86b8d564d794.p12 addant@adddantwebsite.iam.gserviceaccount.com
+19-04-2023 14:27:58: Credential-CN=111349114374532349253
+19-04-2023 14:27:58: Inside GetP12Credential exInvalid provider type specified.
+
+19-04-2023 14:27:58: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+19-04-2023 14:27:59: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+19-04-2023 14:38:43: GetP12Credential case 1 from   C:\AddantServiceNew\AddantService\AddantService\Log\adddantwebsite-86b8d564d794.p12 addant@adddantwebsite.iam.gserviceaccount.com
+19-04-2023 14:38:43: Credential-CN=111349114374532349253
+19-04-2023 14:38:43: Inside GetP12Credential exInvalid provider type specified.
+
+19-04-2023 14:38:44: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+19-04-2023 14:38:45: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+19-04-2023 14:40:45: GetP12Credential case 1 from   C:\AddantServiceNew\AddantService\AddantService\Log\adddantwebsite-86b8d564d794.p12 addant@adddantwebsite.iam.gserviceaccount.com
+19-04-2023 14:40:45: Credential-CN=111349114374532349253
+19-04-2023 14:40:46: Inside GetP12Credential exInvalid provider type specified.
+
+19-04-2023 14:40:46: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+19-04-2023 14:40:46: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+19-04-2023 14:51:47: GetP12Credential case 1 from   C:\AddantServiceNew\AddantService\AddantService\Log\adddantwebsite-86b8d564d794.p12 addant@adddantwebsite.iam.gserviceaccount.com
+19-04-2023 14:51:47: Credential-CN=111349114374532349253
+19-04-2023 14:51:47: Inside GetP12Credential exInvalid provider type specified.
+
+19-04-2023 14:51:47: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+19-04-2023 14:51:48: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+19-04-2023 15:03:09: GetP12Credential case 1 from   C:\AddantServiceNew\AddantService\AddantService\Log\adddantwebsite-86b8d564d794.p12 addant@adddantwebsite.iam.gserviceaccount.com
+19-04-2023 15:03:10: Credential-CN=111349114374532349253
+19-04-2023 15:03:10: Inside GetP12Credential exInvalid provider type specified.
+
+19-04-2023 15:03:10: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+19-04-2023 15:03:11: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.

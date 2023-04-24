@@ -1,0 +1,12 @@
+01-03-2023 12:29:50 PM: Before entering to Send Email. Getting all acknowledge email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+01-03-2023 12:29:52 PM: Template not null. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+01-03-2023 12:31:01 PM: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgc491de52-db29-471d-8442-490b561bb23c.jpg
+01-03-2023 12:31:17 PM: Before entering to Send Email. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+01-03-2023 12:31:17 PM: Template not null. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+01-03-2023 12:31:21 PM: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgc491de52-db29-471d-8442-490b561bb23c.jpg
+01-03-2023 02:09:40 PM: Before entering to Send Email. Getting all acknowledge email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+01-03-2023 02:09:42 PM: Template not null. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+01-03-2023 03:36:55 PM: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgc491de52-db29-471d-8442-490b561bb23c.jpg
+01-03-2023 03:37:07 PM: Before entering to Send Email. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+01-03-2023 03:37:07 PM: Template not null. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+01-03-2023 03:37:11 PM: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgc491de52-db29-471d-8442-490b561bb23c.jpg

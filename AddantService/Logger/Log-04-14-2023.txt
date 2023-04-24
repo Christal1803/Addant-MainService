@@ -1,0 +1,49 @@
+14-04-2023 08:55:55: Inside GetP12Credential
+14-04-2023 08:55:55: Credential-CN=111349114374532349253
+14-04-2023 08:55:55: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 08:57:46: Inside GetP12Credential
+14-04-2023 08:57:46: Credential-CN=111349114374532349253
+14-04-2023 08:57:46: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:01:28: Inside GetP12Credential
+14-04-2023 09:01:28: Credential-CN=111349114374532349253
+14-04-2023 09:01:28: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:01:53: Inside GetWebsiteVisitThe service analyticsreporting has thrown an exception. HttpStatusCode is BadRequest. There are too many requests in the batch request. The max allowed is 5
+14-04-2023 09:02:00: Inside GetP12Credential
+14-04-2023 09:02:00: Credential-CN=111349114374532349253
+14-04-2023 09:02:00: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:03:01: Inside GetP12Credential
+14-04-2023 09:03:01: Credential-CN=111349114374532349253
+14-04-2023 09:03:01: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:05:57: Inside GetP12Credential
+14-04-2023 09:05:57: Credential-CN=111349114374532349253
+14-04-2023 09:05:57: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:07:53: Inside GetP12Credential
+14-04-2023 09:07:53: Credential-CN=111349114374532349253
+14-04-2023 09:07:53: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:09:41: Inside GetP12Credential
+14-04-2023 09:09:42: Credential-CN=111349114374532349253
+14-04-2023 09:09:42: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:14:03: Inside GetP12Credential
+14-04-2023 09:14:03: Credential-CN=111349114374532349253
+14-04-2023 09:14:03: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:15:39: Inside GetP12Credential
+14-04-2023 09:15:39: Credential-CN=111349114374532349253
+14-04-2023 09:15:39: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 09:17:04: Inside GetP12Credential
+14-04-2023 09:17:04: Credential-CN=111349114374532349253
+14-04-2023 09:17:04: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 11:30:12: The property 'UserId' is part of the object's key information and cannot be modified. 
+14-04-2023 14:28:39: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgb577d63d-5f4a-4ffa-b49b-974db9bb29d4.jpg
+14-04-2023 14:38:38: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgb577d63d-5f4a-4ffa-b49b-974db9bb29d4.jpg
+14-04-2023 14:42:38: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgb577d63d-5f4a-4ffa-b49b-974db9bb29d4.jpg
+14-04-2023 14:50:22: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgb577d63d-5f4a-4ffa-b49b-974db9bb29d4.jpg
+14-04-2023 14:54:52: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgb577d63d-5f4a-4ffa-b49b-974db9bb29d4.jpg
+14-04-2023 14:55:40: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgb577d63d-5f4a-4ffa-b49b-974db9bb29d4.jpg
+14-04-2023 16:19:16: Inside GetP12Credential
+14-04-2023 16:19:17: Credential-CN=111349114374532349253
+14-04-2023 16:19:17: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 16:19:17: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+14-04-2023 16:49:56: Inside GetP12Credential
+14-04-2023 16:49:56: Credential-CN=111349114374532349253
+14-04-2023 16:49:56: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+14-04-2023 16:49:56: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService

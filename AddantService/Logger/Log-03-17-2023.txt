@@ -1,0 +1,48 @@
+17-03-2023 10:07:55 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 10:08:00 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 10:09:37 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 10:35:50 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 10:38:19 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 10:53:58 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 10:54:17 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 10:57:46 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 11:12:41 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 11:16:52 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 11:28:42 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 11:29:45 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 11:32:23 AM: The Entity Framework provider type 'System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer' registered in the application config file for the ADO.NET provider with invariant name 'System.Data.SqlClient' could not be loaded. Make sure that the assembly-qualified name is used and that the assembly is available to the running application. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+17-03-2023 11:32:57 AM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 12:29:55 PM: An error occurred while executing the command definition. See the inner exception for details.
+17-03-2023 01:34:02 PM: The Entity Framework provider type 'System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer' registered in the application config file for the ADO.NET provider with invariant name 'System.Data.SqlClient' could not be loaded. Make sure that the assembly-qualified name is used and that the assembly is available to the running application. See http://go.microsoft.com/fwlink/?LinkId=260882 for more information.
+17-03-2023 02:17:38 PM: Inside GetP12Credential
+17-03-2023 02:17:38 PM: Credential-CN=111349114374532349253
+17-03-2023 02:17:38 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+17-03-2023 02:17:38 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+17-03-2023 02:17:47 PM: Inside GetP12Credential
+17-03-2023 02:17:47 PM: Credential-CN=111349114374532349253
+17-03-2023 02:17:47 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+17-03-2023 02:17:47 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+17-03-2023 02:46:47 PM: Inside GetP12Credential
+17-03-2023 02:46:47 PM: Credential-CN=111349114374532349253
+17-03-2023 02:46:48 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+17-03-2023 02:46:48 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+17-03-2023 02:46:54 PM: Inside GetP12Credential
+17-03-2023 02:46:55 PM: Credential-CN=111349114374532349253
+17-03-2023 02:46:55 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+17-03-2023 02:46:55 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+17-03-2023 02:51:14 PM: Inside GetP12Credential
+17-03-2023 02:51:14 PM: Credential-CN=111349114374532349253
+17-03-2023 02:51:14 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+17-03-2023 02:51:14 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+17-03-2023 02:52:20 PM: Inside GetP12Credential
+17-03-2023 02:52:20 PM: Credential-CN=111349114374532349253
+17-03-2023 02:52:20 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+17-03-2023 02:52:20 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+17-03-2023 02:58:53 PM: Inside GetP12Credential
+17-03-2023 02:58:53 PM: Credential-CN=111349114374532349253
+17-03-2023 02:58:53 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+17-03-2023 02:58:53 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+17-03-2023 03:12:54 PM: Inside GetP12Credential
+17-03-2023 03:12:54 PM: Credential-CN=111349114374532349253
+17-03-2023 03:12:54 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+17-03-2023 03:12:54 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService

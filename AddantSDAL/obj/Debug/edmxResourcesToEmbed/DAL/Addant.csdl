@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AddantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AddantLife">
+    <Key>
+      <PropertyRef Name="IdAddantLife" />
+    </Key>
+    <Property Name="IdAddantLife" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="CoverImgUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ThumbNailInnerUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InnerImgURl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="IdBlog" />
+    </Key>
+    <Property Name="IdBlog" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConverImgUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="BannerImgUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ContentUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="MainHeader" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="PostDetail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Candidate">
+    <Key>
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCandidate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPosition" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ResumeUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="Position" Relationship="Self.FK__Candidate__IdPos__49C3F6B7" FromRole="Candidate" ToRole="Position" />
+  </EntityType>
+  <EntityType Name="Enquiry">
+    <Key>
+      <PropertyRef Name="IdEnquiry" />
+    </Key>
+    <Property Name="IdEnquiry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Subject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="IdPosition" />
+    </Key>
+    <Property Name="IdPosition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <NavigationProperty Name="Candidates" Relationship="Self.FK__Candidate__IdPos__49C3F6B7" FromRole="Position" ToRole="Candidate" />
+    <NavigationProperty Name="PositionDetails" Relationship="Self.FK__PositionD__IdPos__44FF419A" FromRole="Position" ToRole="PositionDetail" />
+  </EntityType>
+  <EntityType Name="PositionDetail">
+    <Key>
+      <PropertyRef Name="IdPositionDetail" />
+    </Key>
+    <Property Name="IdPositionDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdPosition" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="SubHeader" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SubHeaderContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Position" Relationship="Self.FK__PositionD__IdPos__44FF419A" FromRole="PositionDetail" ToRole="Position" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <Association Name="FK__Candidate__IdPos__49C3F6B7">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Candidate" Type="Self.Candidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="IdPosition" />
+      </Principal>
+      <Dependent Role="Candidate">
+        <PropertyRef Name="IdPosition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PositionD__IdPos__44FF419A">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="PositionDetail" Type="Self.PositionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="IdPosition" />
+      </Principal>
+      <Dependent Role="PositionDetail">
+        <PropertyRef Name="IdPosition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AddantEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AddantLives" EntityType="Self.AddantLife" />
+    <EntitySet Name="Blogs" EntityType="Self.Blog" />
+    <EntitySet Name="Candidates" EntityType="Self.Candidate" />
+    <EntitySet Name="Enquiries" EntityType="Self.Enquiry" />
+    <EntitySet Name="Positions" EntityType="Self.Position" />
+    <EntitySet Name="PositionDetails" EntityType="Self.PositionDetail" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__Candidate__IdPos__49C3F6B7" Association="Self.FK__Candidate__IdPos__49C3F6B7">
+      <End Role="Position" EntitySet="Positions" />
+      <End Role="Candidate" EntitySet="Candidates" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PositionD__IdPos__44FF419A" Association="Self.FK__PositionD__IdPos__44FF419A">
+      <End Role="Position" EntitySet="Positions" />
+      <End Role="PositionDetail" EntitySet="PositionDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

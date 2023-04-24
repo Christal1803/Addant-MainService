@@ -1,0 +1,42 @@
+15-03-2023 12:10:00 PM: Value cannot be null.
+Parameter name: entity
+15-03-2023 05:18:20 PM: Inside GetP12Credential
+15-03-2023 05:18:21 PM: Credential-CN=111349114374532349253
+15-03-2023 05:18:21 PM: Inside GetP12Credential exInvalid provider type specified.
+
+15-03-2023 05:18:46 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+15-03-2023 05:24:36 PM: Inside GetP12Credential
+15-03-2023 05:24:36 PM: Credential-CN=111349114374532349253
+15-03-2023 05:24:36 PM: Inside GetP12Credential exInvalid provider type specified.
+
+15-03-2023 05:24:36 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+15-03-2023 05:24:37 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication
+15-03-2023 05:24:54 PM: Inside GetP12Credential
+15-03-2023 05:24:54 PM: Credential-CN=111349114374532349253
+15-03-2023 05:24:54 PM: Inside GetP12Credential exInvalid provider type specified.
+
+15-03-2023 05:25:00 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+15-03-2023 05:28:48 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication
+15-03-2023 05:29:03 PM: Inside GetP12Credential
+15-03-2023 05:29:04 PM: Credential-CN=111349114374532349253
+15-03-2023 05:29:04 PM: Inside GetP12Credential exInvalid provider type specified.
+
+15-03-2023 05:30:09 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+15-03-2023 05:30:10 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication
+15-03-2023 09:45:39 PM: Inside GetP12Credential
+15-03-2023 09:45:39 PM: Credential-CN=111349114374532349253
+15-03-2023 09:45:39 PM: Inside GetP12Credential exInvalid provider type specified.
+
+15-03-2023 09:49:55 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+15-03-2023 09:50:17 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication
+15-03-2023 09:50:45 PM: Inside GetP12Credential
+15-03-2023 09:50:46 PM: Credential-CN=111349114374532349253
+15-03-2023 09:50:46 PM: Inside GetP12Credential exInvalid provider type specified.
+
+15-03-2023 09:50:50 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+15-03-2023 09:51:24 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication
+15-03-2023 10:12:36 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication
+15-03-2023 10:18:30 PM: Inside GetP12Credential
+15-03-2023 10:18:30 PM: Credential-CN=111349114374532349253
+15-03-2023 10:18:31 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+15-03-2023 10:18:45 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService

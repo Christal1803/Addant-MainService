@@ -1,0 +1,4 @@
+18-01-2023 09:52:16 PM: An error occurred while executing the command definition. See the inner exception for details.
+18-01-2023 09:52:25 PM: An error occurred while executing the command definition. See the inner exception for details.
+18-01-2023 09:53:00 PM: An error occurred while executing the command definition. See the inner exception for details.
+18-01-2023 11:53:45 PM: The entity type DbQuery`1 is not part of the model for the current context.

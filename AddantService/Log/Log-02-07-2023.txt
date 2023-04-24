@@ -1,0 +1,24 @@
+07-02-2023 11:44:18 AM: Inside GetAllPostion()
+07-02-2023 11:45:32 AM: Inside GetP12Credential
+07-02-2023 11:45:32 AM: Credential-CN=111349114374532349253
+07-02-2023 11:45:32 AM: Inside GetP12Credential exInvalid provider type specified.
+
+07-02-2023 11:45:32 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+07-02-2023 11:45:33 AM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+07-02-2023 11:45:35 AM: Inside GetP12Credential
+07-02-2023 11:45:35 AM: Credential-CN=111349114374532349253
+07-02-2023 11:45:35 AM: Inside GetP12Credential exInvalid provider type specified.
+
+07-02-2023 11:45:35 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+07-02-2023 11:45:35 AM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+07-02-2023 11:46:00 AM: Object reference not set to an instance of an object.
+07-02-2023 11:46:15 AM: Inside GetP12Credential
+07-02-2023 11:46:17 AM: Credential-CN=111349114374532349253
+07-02-2023 11:47:31 AM: Inside GetP12Credential
+07-02-2023 11:47:31 AM: Credential-CN=111349114374532349253
+07-02-2023 11:47:31 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+07-02-2023 11:47:31 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+07-02-2023 11:48:00 AM: Inside GetP12Credential
+07-02-2023 11:48:01 AM: Credential-CN=111349114374532349253
+07-02-2023 11:48:01 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+07-02-2023 11:48:04 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService

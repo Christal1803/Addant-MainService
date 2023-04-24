@@ -1,0 +1,8 @@
+28-02-2023 09:30:15 AM: Inside ComposeBlog()
+28-02-2023 03:49:25 PM: Before entering to Send Email. Getting all acknowledge email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+28-02-2023 03:49:25 PM: Template not null. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+28-02-2023 03:51:29 PM: Before entering to Send Email. Getting all acknowledge email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+28-02-2023 03:51:29 PM: Template not null. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+28-02-2023 03:57:48 PM: HeaderrImageUrl -https://service.addant.com//Uploads/EmailHeader\Imgc491de52-db29-471d-8442-490b561bb23c.jpg
+28-02-2023 04:16:25 PM: Before entering to Send Email. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO
+28-02-2023 04:16:25 PM: Template not null. Getting all email template by ID value -AddantSDAL.DTO.EmailTemplateDTO

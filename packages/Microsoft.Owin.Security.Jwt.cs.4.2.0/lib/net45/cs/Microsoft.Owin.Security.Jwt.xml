@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Owin.Security.Jwt</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Owin.Security.Jwt.IIssuerSecurityTokenProvider">
+      <summary>Poskytuje informace o tokenu zabezpečení pro implementující třídu.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.IIssuerSecurityTokenProvider.Issuer">
+      <summary>Získá vystavitele, pro kterého jsou přihlašovací údaje.</summary>
+      <returns>Vystavitel, pro kterého jsou přihlašovací údaje</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.IIssuerSecurityTokenProvider.SecurityTokens">
+      <summary>Získá všechny známé tokeny zabezpečení.</summary>
+      <returns>Všechny známé tokeny zabezpečení</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions">
+      <summary>Možnosti pro konfiguraci obslužných rutin nosného tokenu JWT</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions.#ctor">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions" />.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions.AllowedAudiences">
+      <summary>Získá nebo nastaví povolené cílové skupiny, podle kterých bude příchozí token JWT kontrolován.</summary>
+      <returns>Povolené cílové skupiny</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions.IssuerSecurityTokenProviders">
+      <summary>Získá nebo nastaví poskytovatele tokenů zabezpečení vystavitele poskytujícího podpisové klíče, podle kterých má být podpis JWT zkontrolován.</summary>
+      <returns>Poskytovatelé tokenů zabezpečení vystavitele</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions.Provider">
+      <summary>Získá nebo nastaví zprostředkovatele ověřování.</summary>
+      <returns>Zprostředkovatel</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions.Realm">
+      <summary>Získá nebo nastaví sféru ověřování.</summary>
+      <returns>Sféra ověřování</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions.TokenHandler">
+      <summary>Objekt System.IdentityModel.Tokens.SecurityTokenHandler určený k vytváření a ověřování webových tokenů Json.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions.TokenValidationParameters">
+      <summary>Získá nebo nastaví položku <see cref="P:Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions.TokenValidationParameters" />, která se používá k ověření platnosti určitého tokenu.</summary>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Jwt.JwtFormat">
+      <summary>Podepíše a ověří webové tokeny JSON.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.JwtFormat.#ctor">
+      <summary>Vytvoří nový formát JwtFormat, ve kterém jsou ve výchozím nastavení povolené položky TokenHandler a UseTokenLifetime.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.JwtFormat.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Microsoft.Owin.Security.Jwt.IIssuerSecurityTokenProvider})">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.JwtFormat" />.</summary>
+      <param name="allowedAudiences">Povolená cílová skupina pro tokeny JWT</param>
+      <param name="issuerCredentialProviders">Poskytovatel přihlašovacích údajů vystavitele</param>
+      <exception cref="T:System.ArgumentNullException">K této výjimce dojde v případě, že je parametr <paramref name="issuerCredentialProviders" /> null.</exception>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.JwtFormat.#ctor(System.IdentityModel.Tokens.TokenValidationParameters)">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.JwtFormat" />.</summary>
+      <param name="validationParameters">Parametry <see cref="T:System.IdentityModel.Tokens.TokenValidationParameters" />, které se používají ke zjištění platnosti tokenu.</param>
+      <exception cref="T:System.ArgumentNullException">K této výjimce dojde v případě, že je parametr <paramref name="validationParameters" /> null.</exception>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.JwtFormat.#ctor(System.IdentityModel.Tokens.TokenValidationParameters,Microsoft.Owin.Security.Jwt.IIssuerSecurityTokenProvider)"></member>
+    <member name="M:Microsoft.Owin.Security.Jwt.JwtFormat.#ctor(System.String,Microsoft.Owin.Security.Jwt.IIssuerSecurityTokenProvider)">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.JwtFormat" />.</summary>
+      <param name="allowedAudience">Povolená cílová skupina pro tokeny JWT</param>
+      <param name="issuerCredentialProvider">Poskytovatel přihlašovacích údajů vystavitele</param>
+      <exception cref="T:System.ArgumentNullException">K této výjimce dojde v případě, že je parametr <paramref name="issuerCredentialProvider" /> null.</exception>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.JwtFormat.Protect(Microsoft.Owin.Security.AuthenticationTicket)">
+      <summary>Transformuje zadaný lístek ověřování na token JWT.</summary>
+      <param name="data">Lístek ověřování, který má být transformován na token JWT</param>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtFormat.TokenHandler">
+      <summary>Objekt System.IdentityModel.Tokens.SecurityTokenHandler určený k vytváření a ověřování webových tokenů Json.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.JwtFormat.Unprotect(System.String)">
+      <summary>Ověří zadanou položku JWT a vytvoří z ní lístek AuthenticationTicket.</summary>
+      <returns>Lístek ověřování AuthenticationTicket vytvořený z tokenu JWT (<paramref name="protectedText" />)</returns>
+      <param name="protectedText">Položka JWT k ověření.</param>
+      <exception cref="T:System.ArgumentNullException">K této výjimce dojde v případě, že je parametr <paramref name="protectedText" /> null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">K této výjimce dojde v případě, že <paramref name="protectedText" /> není položka JWT.</exception>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtFormat.UseTokenLifetime">
+      <summary>Určuje, že doba trvání relace ověřování (např.souborů cookie) by měla odpovídat hodnotě tokenu ověřování.Pokud token neposkytuje informace o době trvání, použijí se normální doby trvání relace.Ve výchozím nastavení je tahle možnost povolená.</summary>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.JwtFormat.ValidateIssuer">
+      <summary>Získá nebo nastaví hodnotu, která označuje, zda mají být ověřeni vystavitelé tokenů JWT.</summary>
+      <returns>Hodnota true, pokud má být vystavitel ověřen, jinak hodnota false.</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider">
+      <summary>Implementuje objekt <see cref="T:Microsoft.Owin.Security.Jwt.IIssuerSecurityTokenProvider" /> pro webové tokeny JSON (JWT) podepsané symetrickým klíčem.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider.#ctor(System.String,System.Byte[])">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider" />.</summary>
+      <param name="issuer">Vystavitel tokenu JWT</param>
+      <param name="key">Symetrický klíč, pomocí kterého je token JWT podepsán</param>
+      <exception cref="T:System.ArgumentNullException">K této výjimce dojde v případě, že vystavitel je null.</exception>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Byte[]})">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider" />.</summary>
+      <param name="issuer">Vystavitel tokenu JWT</param>
+      <param name="keys">Symetrické klíče, pomocí kterých by mohly být podepsány tokeny JWT</param>
+      <exception cref="T:System.ArgumentNullException">K této výjimce dojde v případě, že vystavitel je null.</exception>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider" />.</summary>
+      <param name="issuer">Vystavitel tokenu JWT</param>
+      <param name="base64Keys">Symetrické klíče s kódováním base64, pomocí kterých by mohl být podepsán token JWT</param>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider.#ctor(System.String,System.String)">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider" />.</summary>
+      <param name="issuer">Vystavitel tokenu JWT</param>
+      <param name="base64Key">Symetrický klíč s kódováním base64, pomocí kterého je token JWT podepsán</param>
+      <exception cref="T:System.ArgumentNullException">K této výjimce dojde v případě, že vystavitel je null.</exception>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider.Issuer">
+      <summary>Získá vystavitele, pro kterého jsou podpisové klíče</summary>
+      <returns>Vystavitel, pro kterého jsou podpisové klíče</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.SymmetricKeyIssuerSecurityTokenProvider.SecurityTokens">
+      <summary>Získá všechny známé tokeny zabezpečení.</summary>
+      <returns>Všechny známé tokeny zabezpečení</returns>
+    </member>
+    <member name="T:Microsoft.Owin.Security.Jwt.X509CertificateSecurityTokenProvider">
+      <summary>Implementuje objekt <see cref="T:Microsoft.Owin.Security.Jwt.IIssuerSecurityTokenProvider" /> pro webové tokeny JSON (JWT) X509.</summary>
+    </member>
+    <member name="M:Microsoft.Owin.Security.Jwt.X509CertificateSecurityTokenProvider.#ctor(System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+      <summary>Inicializuje novou instanci třídy <see cref="T:Microsoft.Owin.Security.Jwt.X509CertificateSecurityTokenProvider" />.</summary>
+      <param name="issuer">Vystavitel</param>
+      <param name="certificate">Certifikát</param>
+      <exception cref="T:System.ArgumentNullException">vystavitel nebo certifikát</exception>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.X509CertificateSecurityTokenProvider.Issuer">
+      <summary>Získá vystavitele, pro kterého jsou přihlašovací údaje.</summary>
+      <returns>Vystavitel, pro kterého jsou přihlašovací údaje</returns>
+    </member>
+    <member name="P:Microsoft.Owin.Security.Jwt.X509CertificateSecurityTokenProvider.SecurityTokens">
+      <summary>Získá všechny známé tokeny zabezpečení.</summary>
+      <returns>Všechny známé tokeny zabezpečení</returns>
+    </member>
+    <member name="T:Owin.JwtBearerAuthenticationExtensions">
+      <summary>Metody rozšíření poskytované middlewarem nosným tokenem JWT</summary>
+    </member>
+    <member name="M:Owin.JwtBearerAuthenticationExtensions.UseJwtBearerAuthentication(Owin.IAppBuilder,Microsoft.Owin.Security.Jwt.JwtBearerAuthenticationOptions)">
+      <summary>Přidá middleware nosného tokenu JWT do kanálu vaší webové aplikace.</summary>
+      <returns>Parametr původní aplikace</returns>
+      <param name="app">Objekt IAppBuilder předaný vaší metodě konfigurace</param>
+      <param name="options">Třída možností, která řídí chování middlewaru</param>
+    </member>
+  </members>
+</doc>

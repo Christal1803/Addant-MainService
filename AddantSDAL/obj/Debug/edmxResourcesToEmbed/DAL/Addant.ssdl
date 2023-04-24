@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AddantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AddantLife">
+    <Key>
+      <PropertyRef Name="IdAddantLife" />
+    </Key>
+    <Property Name="IdAddantLife" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+    <Property Name="CoverImgUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="ThumbNailInnerUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="InnerImgURl" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="IdBlog" />
+    </Key>
+    <Property Name="IdBlog" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConverImgUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="BannerImgUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="ContentUrl" Type="varchar" MaxLength="250" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="MainHeader" Type="nvarchar" MaxLength="250" />
+    <Property Name="PostDetail" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Candidate">
+    <Key>
+      <PropertyRef Name="IdCandidate" />
+    </Key>
+    <Property Name="IdCandidate" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPosition" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" />
+    <Property Name="ResumeUrl" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Enquiry">
+    <Key>
+      <PropertyRef Name="IdEnquiry" />
+    </Key>
+    <Property Name="IdEnquiry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="50" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="250" />
+    <Property Name="Message" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Position">
+    <Key>
+      <PropertyRef Name="IdPosition" />
+    </Key>
+    <Property Name="IdPosition" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="PositionDetail">
+    <Key>
+      <PropertyRef Name="IdPositionDetail" />
+    </Key>
+    <Property Name="IdPositionDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPosition" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="SubHeader" Type="nvarchar" MaxLength="100" />
+    <Property Name="SubHeaderContent" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Addant.dbo.User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <Association Name="FK__Candidate__IdPos__49C3F6B7">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="Candidate" Type="Self.Candidate" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="IdPosition" />
+      </Principal>
+      <Dependent Role="Candidate">
+        <PropertyRef Name="IdPosition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PositionD__IdPos__44FF419A">
+    <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+    <End Role="PositionDetail" Type="Self.PositionDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Position">
+        <PropertyRef Name="IdPosition" />
+      </Principal>
+      <Dependent Role="PositionDetail">
+        <PropertyRef Name="IdPosition" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AddantModelStoreContainer">
+    <EntitySet Name="AddantLife" EntityType="Self.AddantLife" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Candidate" EntityType="Self.Candidate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enquiry" EntityType="Self.Enquiry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PositionDetail" EntityType="Self.PositionDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [User].[UserId] AS [UserId], 
+    [User].[UserName] AS [UserName], 
+    [User].[Password] AS [Password], 
+    [User].[CreatedOn] AS [CreatedOn], 
+    [User].[IsActive] AS [IsActive]
+    FROM [dbo].[User] AS [User]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Candidate__IdPos__49C3F6B7" Association="Self.FK__Candidate__IdPos__49C3F6B7">
+      <End Role="Position" EntitySet="Position" />
+      <End Role="Candidate" EntitySet="Candidate" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PositionD__IdPos__44FF419A" Association="Self.FK__PositionD__IdPos__44FF419A">
+      <End Role="Position" EntitySet="Position" />
+      <End Role="PositionDetail" EntitySet="PositionDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

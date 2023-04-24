@@ -1,0 +1,12 @@
+09-02-2023 03:48:56 PM: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+09-02-2023 04:00:32 PM: An error occurred while executing the command definition. See the inner exception for details.
+09-02-2023 04:00:42 PM: An error occurred while executing the command definition. See the inner exception for details.
+09-02-2023 04:01:46 PM: An error occurred while executing the command definition. See the inner exception for details.
+09-02-2023 04:03:24 PM: An error occurred while executing the command definition. See the inner exception for details.
+09-02-2023 04:03:24 PM: An error occurred while executing the command definition. See the inner exception for details.
+09-02-2023 04:03:33 PM: An error occurred while executing the command definition. See the inner exception for details.
+09-02-2023 04:12:07 PM: An error occurred while executing the command definition. See the inner exception for details.
+09-02-2023 04:13:42 PM: An error occurred while executing the command definition. See the inner exception for details.
+09-02-2023 05:31:21 PM: Nullable object must have a value.
+09-02-2023 05:32:05 PM: Nullable object must have a value.
+09-02-2023 05:33:59 PM: Nullable object must have a value.

@@ -1,0 +1,92 @@
+13-04-2023 11:26:34: Inside GetP12Credential
+13-04-2023 11:26:34: Credential-CN=111349114374532349253
+13-04-2023 11:26:34: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 11:28:25: Inside GetWebsiteVisitThe service analyticsreporting has thrown an exception. HttpStatusCode is BadRequest. There are too many requests in the batch request. The max allowed is 5
+13-04-2023 11:28:38: Inside GetP12Credential
+13-04-2023 11:28:38: Credential-CN=111349114374532349253
+13-04-2023 11:28:38: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 12:05:21: Inside GetP12Credential
+13-04-2023 12:05:21: Credential-CN=111349114374532349253
+13-04-2023 12:05:21: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 12:09:53: Inside GetP12Credential
+13-04-2023 12:09:54: Credential-CN=111349114374532349253
+13-04-2023 12:09:54: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 12:19:50: Inside GetP12Credential
+13-04-2023 12:19:50: Credential-CN=111349114374532349253
+13-04-2023 12:19:50: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 12:21:12: Inside GetP12Credential
+13-04-2023 12:21:12: Credential-CN=111349114374532349253
+13-04-2023 12:21:12: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 12:26:33: Inside GetP12Credential
+13-04-2023 12:26:33: Credential-CN=111349114374532349253
+13-04-2023 12:26:33: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 14:40:25: Inside GetP12Credential
+13-04-2023 14:40:25: Credential-CN=111349114374532349253
+13-04-2023 14:40:25: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 15:03:03: Inside GetP12Credential
+13-04-2023 15:03:03: Credential-CN=111349114374532349253
+13-04-2023 15:03:03: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 15:03:56: Inside GetP12Credential
+13-04-2023 15:03:56: Credential-CN=111349114374532349253
+13-04-2023 15:03:56: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 15:04:25: Inside GetP12Credential
+13-04-2023 15:04:25: Credential-CN=111349114374532349253
+13-04-2023 15:04:25: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 15:29:41: An error occurred while executing the command definition. See the inner exception for details.
+13-04-2023 15:46:48: Inside GetP12Credential
+13-04-2023 15:46:48: Credential-CN=111349114374532349253
+13-04-2023 15:46:48: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 15:47:46: Inside GetP12Credential
+13-04-2023 15:47:46: Credential-CN=111349114374532349253
+13-04-2023 15:47:46: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 15:54:00: Inside GetP12Credential
+13-04-2023 15:54:00: Credential-CN=111349114374532349253
+13-04-2023 15:54:00: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 15:54:00: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+13-04-2023 16:00:53: Inside GetP12Credential
+13-04-2023 16:00:53: Credential-CN=111349114374532349253
+13-04-2023 16:00:53: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 16:01:35: Inside GetWebsiteVisitThe service analyticsreporting has thrown an exception. HttpStatusCode is BadRequest. All requests should have same dateRange
+13-04-2023 16:01:44: Inside GetP12Credential
+13-04-2023 16:01:44: Credential-CN=111349114374532349253
+13-04-2023 16:01:44: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 16:02:12: Inside GetP12Credential
+13-04-2023 16:02:13: Credential-CN=111349114374532349253
+13-04-2023 16:02:13: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 16:04:33: Inside GetP12Credential
+13-04-2023 16:04:33: Credential-CN=111349114374532349253
+13-04-2023 16:04:33: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 16:15:15: Inside GetP12Credential
+13-04-2023 16:15:15: Credential-CN=111349114374532349253
+13-04-2023 16:15:15: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 16:15:58: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+13-04-2023 16:16:11: Inside GetP12Credential
+13-04-2023 16:16:11: Credential-CN=111349114374532349253
+13-04-2023 16:16:11: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 16:20:43: Inside GetP12Credential
+13-04-2023 16:20:43: Credential-CN=111349114374532349253
+13-04-2023 16:20:43: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 17:14:25: Inside GetP12Credential
+13-04-2023 17:14:25: Credential-CN=111349114374532349253
+13-04-2023 17:14:25: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 17:16:23: Inside GetP12Credential
+13-04-2023 17:16:23: Credential-CN=111349114374532349253
+13-04-2023 17:16:23: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 17:30:16: Inside GetP12Credential
+13-04-2023 17:30:16: Credential-CN=111349114374532349253
+13-04-2023 17:30:16: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 17:30:42: Inside GetP12Credential
+13-04-2023 17:30:42: Credential-CN=111349114374532349253
+13-04-2023 17:30:42: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 17:32:51: Inside GetP12Credential
+13-04-2023 17:32:51: Credential-CN=111349114374532349253
+13-04-2023 17:32:51: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 17:33:33: Inside GetP12Credential
+13-04-2023 17:33:33: Credential-CN=111349114374532349253
+13-04-2023 17:33:33: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 17:34:16: Inside GetP12Credential
+13-04-2023 17:34:17: Credential-CN=111349114374532349253
+13-04-2023 17:34:17: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+13-04-2023 17:39:23: Inside GetP12Credential
+13-04-2023 17:39:23: Credential-CN=111349114374532349253
+13-04-2023 17:39:23: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey

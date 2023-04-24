@@ -1,0 +1,13 @@
+05-04-2023 09:45:40: Inside GetAllPostion()
+05-04-2023 02:33:27 PM: Inside GetP12Credential
+05-04-2023 02:33:28 PM: Credential-CN=111349114374532349253
+05-04-2023 02:33:28 PM: Inside GetP12Credential exInvalid provider type specified.
+
+05-04-2023 02:33:28 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+05-04-2023 02:33:29 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+05-04-2023 02:46:54 PM: Inside GetP12Credential
+05-04-2023 02:46:54 PM: Credential-CN=111349114374532349253
+05-04-2023 02:46:55 PM: Inside GetP12Credential exInvalid provider type specified.
+
+05-04-2023 02:46:55 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+05-04-2023 02:46:57 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.

@@ -1,0 +1,324 @@
+06-04-2023 09:15:05 AM: Inside GetP12Credential
+06-04-2023 09:15:05 AM: Credential-CN=111349114374532349253
+06-04-2023 09:15:05 AM: Inside GetP12Credential exInvalid provider type specified.
+
+06-04-2023 09:15:06 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 09:15:08 AM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+06-04-2023 09:42:28 AM: Inside GetP12Credential
+06-04-2023 09:42:28 AM: Credential-CN=111349114374532349253
+06-04-2023 09:42:28 AM: Inside GetP12Credential exInvalid provider type specified.
+
+06-04-2023 09:42:28 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 09:42:30 AM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication
+06-04-2023 09:43:54 AM: Inside GetP12Credential
+06-04-2023 09:43:55 AM: Credential-CN=111349114374532349253
+06-04-2023 09:43:55 AM: Inside GetP12Credential exInvalid provider type specified.
+
+06-04-2023 09:43:55 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 09:43:57 AM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is Unauthorized. API keys are not supported by this API. Expected OAuth2 access token or other authentication credentials that assert a principal. See https://cloud.google.com/docs/authentication
+06-04-2023 09:45:45 AM: Inside GetP12Credential
+06-04-2023 09:45:45 AM: Credential-CN=111349114374532349253
+06-04-2023 09:45:45 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 09:45:45 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 09:57:06 AM: Inside GetP12Credential
+06-04-2023 09:57:06 AM: Credential-CN=111349114374532349253
+06-04-2023 09:57:06 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 09:57:06 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 10:37:32 AM: Inside GetP12Credential
+06-04-2023 10:37:32 AM: Credential-CN=111349114374532349253
+06-04-2023 10:37:32 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 10:37:32 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 10:37:48 AM: Inside GetP12Credential
+06-04-2023 10:37:48 AM: Credential-CN=111349114374532349253
+06-04-2023 10:37:48 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 10:37:48 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 10:49:08 AM: Inside GetP12Credential
+06-04-2023 10:49:08 AM: Credential-CN=111349114374532349253
+06-04-2023 10:49:08 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 10:49:08 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 10:49:10 AM: Inside GetWebsiteVisitObject cannot be stored in an array of this type.
+06-04-2023 10:49:52 AM: Inside GetP12Credential
+06-04-2023 10:49:52 AM: Credential-CN=111349114374532349253
+06-04-2023 10:49:52 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 10:49:52 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 10:49:54 AM: Inside GetWebsiteVisitObject cannot be stored in an array of this type.
+06-04-2023 10:50:54 AM: Inside GetP12Credential
+06-04-2023 10:50:54 AM: Credential-CN=111349114374532349253
+06-04-2023 10:50:54 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 10:50:54 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 10:51:27 AM: Inside GetWebsiteVisitObject cannot be stored in an array of this type.
+06-04-2023 10:51:35 AM: Inside GetP12Credential
+06-04-2023 10:51:35 AM: Credential-CN=111349114374532349253
+06-04-2023 10:51:35 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 10:51:35 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 10:55:56 AM: Inside GetP12Credential
+06-04-2023 10:55:56 AM: Credential-CN=111349114374532349253
+06-04-2023 10:55:56 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 10:55:56 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 10:58:52 AM: Inside GetP12Credential
+06-04-2023 10:58:52 AM: Credential-CN=111349114374532349253
+06-04-2023 10:58:52 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 10:58:52 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:08:48 AM: Inside GetP12Credential
+06-04-2023 11:08:49 AM: Credential-CN=111349114374532349253
+06-04-2023 11:08:49 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:08:49 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:32:27 AM: Inside GetP12Credential
+06-04-2023 11:32:27 AM: Credential-CN=111349114374532349253
+06-04-2023 11:32:27 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:32:27 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:33:36 AM: Inside GetP12Credential
+06-04-2023 11:33:36 AM: Credential-CN=111349114374532349253
+06-04-2023 11:33:36 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:33:36 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:35:54 AM: Inside GetP12Credential
+06-04-2023 11:35:54 AM: Credential-CN=111349114374532349253
+06-04-2023 11:35:54 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:35:54 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:40:48 AM: Inside GetP12Credential
+06-04-2023 11:40:48 AM: Credential-CN=111349114374532349253
+06-04-2023 11:40:48 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:40:48 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:40:50 AM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 11:41:02 AM: Inside GetP12Credential
+06-04-2023 11:41:02 AM: Credential-CN=111349114374532349253
+06-04-2023 11:41:02 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:41:02 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:41:03 AM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 11:41:13 AM: Inside GetP12Credential
+06-04-2023 11:41:13 AM: Credential-CN=111349114374532349253
+06-04-2023 11:41:13 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:41:13 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:41:49 AM: Inside GetP12Credential
+06-04-2023 11:41:49 AM: Credential-CN=111349114374532349253
+06-04-2023 11:41:49 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:41:49 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:54:15 AM: Inside GetP12Credential
+06-04-2023 11:54:15 AM: Credential-CN=111349114374532349253
+06-04-2023 11:54:15 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:54:15 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:54:51 AM: Inside GetWebsiteVisitObject reference not set to an instance of an object.
+06-04-2023 11:55:34 AM: Inside GetP12Credential
+06-04-2023 11:55:34 AM: Credential-CN=111349114374532349253
+06-04-2023 11:55:34 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:55:34 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:56:23 AM: Inside GetP12Credential
+06-04-2023 11:56:23 AM: Credential-CN=111349114374532349253
+06-04-2023 11:56:23 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:56:23 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 11:57:51 AM: Inside GetP12Credential
+06-04-2023 11:57:51 AM: Credential-CN=111349114374532349253
+06-04-2023 11:57:51 AM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 11:57:51 AM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 12:04:58 PM: Inside GetP12Credential
+06-04-2023 12:04:58 PM: Credential-CN=111349114374532349253
+06-04-2023 12:04:58 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 12:04:58 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 12:05:00 PM: Inside GetWebsiteVisitUnable to cast object of type 'System.Collections.Generic.List`1[System.Collections.Generic.IList`1[System.String]]' to type 'System.Collections.Generic.IList`1[System.Collections.Generic.IList`1[System.Int32]]'.
+06-04-2023 12:05:31 PM: Inside GetP12Credential
+06-04-2023 12:05:31 PM: Credential-CN=111349114374532349253
+06-04-2023 12:05:31 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 12:05:31 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 12:17:38 PM: Inside GetP12Credential
+06-04-2023 12:17:38 PM: Credential-CN=111349114374532349253
+06-04-2023 12:17:38 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 12:17:38 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:30:24 PM: Inside GetP12Credential
+06-04-2023 02:30:24 PM: Credential-CN=111349114374532349253
+06-04-2023 02:30:24 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:30:24 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:30:29 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is BadRequest. Invalid Date Range: end-date 2023-03-30 precedes start-date 2023-04-06
+06-04-2023 02:35:12 PM: Inside GetP12Credential
+06-04-2023 02:35:12 PM: Credential-CN=111349114374532349253
+06-04-2023 02:35:12 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:35:12 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:35:14 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is BadRequest. Invalid Date Range: end-date 2023-03-06 precedes start-date 2023-04-06
+06-04-2023 02:35:34 PM: Inside GetP12Credential
+06-04-2023 02:35:34 PM: Credential-CN=111349114374532349253
+06-04-2023 02:35:34 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:35:34 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:35:36 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is BadRequest. Invalid Date Range: end-date 2023-03-06 precedes start-date 2023-04-06
+06-04-2023 02:36:17 PM: Inside GetP12Credential
+06-04-2023 02:36:17 PM: Credential-CN=111349114374532349253
+06-04-2023 02:36:17 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:36:19 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:36:21 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is BadRequest. Invalid Date Range: end-date 2023-03-06 precedes start-date 2023-04-06
+06-04-2023 02:36:27 PM: Inside GetP12Credential
+06-04-2023 02:36:27 PM: Credential-CN=111349114374532349253
+06-04-2023 02:36:27 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:36:32 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:37:25 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is BadRequest. Invalid Date Range: end-date 2023-03-06 precedes start-date 2023-04-06
+06-04-2023 02:38:22 PM: Inside GetP12Credential
+06-04-2023 02:38:22 PM: Credential-CN=111349114374532349253
+06-04-2023 02:38:22 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:38:22 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:38:42 PM: Inside GetP12Credential
+06-04-2023 02:38:42 PM: Credential-CN=111349114374532349253
+06-04-2023 02:38:42 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:38:42 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:38:51 PM: Inside GetP12Credential
+06-04-2023 02:38:51 PM: Credential-CN=111349114374532349253
+06-04-2023 02:38:51 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:38:51 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:39:28 PM: Inside GetP12Credential
+06-04-2023 02:39:28 PM: Credential-CN=111349114374532349253
+06-04-2023 02:39:28 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:39:28 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:42:00 PM: Inside GetP12Credential
+06-04-2023 02:42:01 PM: Credential-CN=111349114374532349253
+06-04-2023 02:42:01 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:42:01 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:54:44 PM: Inside GetP12Credential
+06-04-2023 02:54:44 PM: Credential-CN=111349114374532349253
+06-04-2023 02:54:44 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:54:44 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:55:26 PM: Inside GetP12Credential
+06-04-2023 02:55:26 PM: Credential-CN=111349114374532349253
+06-04-2023 02:55:26 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:55:26 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:56:16 PM: Inside GetP12Credential
+06-04-2023 02:56:16 PM: Credential-CN=111349114374532349253
+06-04-2023 02:56:16 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:56:16 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:56:53 PM: Inside GetP12Credential
+06-04-2023 02:56:53 PM: Credential-CN=111349114374532349253
+06-04-2023 02:56:53 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:56:53 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:57:08 PM: Inside GetP12Credential
+06-04-2023 02:57:08 PM: Credential-CN=111349114374532349253
+06-04-2023 02:57:08 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:57:27 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 02:57:43 PM: Inside GetP12Credential
+06-04-2023 02:57:43 PM: Credential-CN=111349114374532349253
+06-04-2023 02:57:43 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 02:57:43 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 03:16:50 PM: Inside GetP12Credential
+06-04-2023 03:16:51 PM: Credential-CN=111349114374532349253
+06-04-2023 03:16:51 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:16:51 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 03:16:53 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is BadRequest. Invalid Date Range: end-date 2023-03-30 precedes start-date 2023-04-06
+06-04-2023 03:17:39 PM: Inside GetP12Credential
+06-04-2023 03:17:39 PM: Credential-CN=111349114374532349253
+06-04-2023 03:17:39 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:17:41 PM: Inside GetWebsiteVisitThe service analytics has thrown an exception. HttpStatusCode is BadRequest. Invalid Date Range: end-date 2023-04-05 precedes start-date 2023-04-06
+06-04-2023 03:17:56 PM: Inside GetP12Credential
+06-04-2023 03:17:56 PM: Credential-CN=111349114374532349253
+06-04-2023 03:17:56 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:19:11 PM: Inside GetP12Credential
+06-04-2023 03:19:11 PM: Credential-CN=111349114374532349253
+06-04-2023 03:19:11 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:21:14 PM: Inside GetP12Credential
+06-04-2023 03:21:14 PM: Credential-CN=111349114374532349253
+06-04-2023 03:21:14 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:21:16 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:21:44 PM: Inside GetP12Credential
+06-04-2023 03:21:44 PM: Credential-CN=111349114374532349253
+06-04-2023 03:21:44 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:21:48 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:21:51 PM: Inside GetP12Credential
+06-04-2023 03:21:51 PM: Credential-CN=111349114374532349253
+06-04-2023 03:21:51 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:23:15 PM: Inside GetP12Credential
+06-04-2023 03:23:15 PM: Credential-CN=111349114374532349253
+06-04-2023 03:23:15 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:23:21 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:23:26 PM: Inside GetP12Credential
+06-04-2023 03:23:26 PM: Credential-CN=111349114374532349253
+06-04-2023 03:23:26 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:27:45 PM: Inside GetP12Credential
+06-04-2023 03:27:45 PM: Credential-CN=111349114374532349253
+06-04-2023 03:27:45 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:28:10 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:28:12 PM: Inside GetP12Credential
+06-04-2023 03:28:13 PM: Credential-CN=111349114374532349253
+06-04-2023 03:28:13 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:30:07 PM: Inside GetP12Credential
+06-04-2023 03:30:07 PM: Credential-CN=111349114374532349253
+06-04-2023 03:30:07 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:30:25 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:30:32 PM: Inside GetP12Credential
+06-04-2023 03:30:32 PM: Credential-CN=111349114374532349253
+06-04-2023 03:30:32 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:32:06 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:32:14 PM: Inside GetP12Credential
+06-04-2023 03:32:14 PM: Credential-CN=111349114374532349253
+06-04-2023 03:32:14 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:34:12 PM: Inside GetP12Credential
+06-04-2023 03:34:12 PM: Credential-CN=111349114374532349253
+06-04-2023 03:34:12 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:34:16 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:34:21 PM: Inside GetP12Credential
+06-04-2023 03:34:21 PM: Credential-CN=111349114374532349253
+06-04-2023 03:34:21 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:34:59 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:35:06 PM: Inside GetP12Credential
+06-04-2023 03:35:06 PM: Credential-CN=111349114374532349253
+06-04-2023 03:35:06 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:35:20 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:35:24 PM: Inside GetP12Credential
+06-04-2023 03:35:24 PM: Credential-CN=111349114374532349253
+06-04-2023 03:35:24 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:36:15 PM: Inside GetP12Credential
+06-04-2023 03:36:15 PM: Credential-CN=111349114374532349253
+06-04-2023 03:36:15 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:41:43 PM: Inside GetWebsiteVisitInput array is longer than the number of columns in this table.
+06-04-2023 03:41:57 PM: Inside GetP12Credential
+06-04-2023 03:41:57 PM: Credential-CN=111349114374532349253
+06-04-2023 03:41:57 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:42:00 PM: Inside GetWebsiteVisitCannot find column 0.
+06-04-2023 03:42:03 PM: Inside GetP12Credential
+06-04-2023 03:42:03 PM: Credential-CN=111349114374532349253
+06-04-2023 03:42:03 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:44:23 PM: Inside GetP12Credential
+06-04-2023 03:44:23 PM: Credential-CN=111349114374532349253
+06-04-2023 03:44:23 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:44:32 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 03:44:48 PM: Inside GetP12Credential
+06-04-2023 03:44:48 PM: Credential-CN=111349114374532349253
+06-04-2023 03:44:48 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:47:33 PM: Inside GetP12Credential
+06-04-2023 03:47:33 PM: Credential-CN=111349114374532349253
+06-04-2023 03:47:33 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:47:37 PM: Inside GetWebsiteVisitCannot find column 0.
+06-04-2023 03:47:41 PM: Inside GetP12Credential
+06-04-2023 03:47:41 PM: Credential-CN=111349114374532349253
+06-04-2023 03:47:41 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:47:55 PM: Inside GetWebsiteVisitCannot find column 0.
+06-04-2023 03:48:00 PM: Inside GetP12Credential
+06-04-2023 03:48:00 PM: Credential-CN=111349114374532349253
+06-04-2023 03:48:00 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:50:48 PM: Inside GetP12Credential
+06-04-2023 03:50:48 PM: Credential-CN=111349114374532349253
+06-04-2023 03:50:48 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:51:28 PM: Inside GetWebsiteVisitA column named 'day1' already belongs to this DataTable.
+06-04-2023 03:51:37 PM: Inside GetP12Credential
+06-04-2023 03:51:37 PM: Credential-CN=111349114374532349253
+06-04-2023 03:51:37 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:53:26 PM: Inside GetP12Credential
+06-04-2023 03:53:27 PM: Credential-CN=111349114374532349253
+06-04-2023 03:53:27 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:53:36 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 03:53:39 PM: Inside GetP12Credential
+06-04-2023 03:53:39 PM: Credential-CN=111349114374532349253
+06-04-2023 03:53:39 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:53:45 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 03:53:49 PM: Inside GetP12Credential
+06-04-2023 03:53:49 PM: Credential-CN=111349114374532349253
+06-04-2023 03:53:49 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 03:55:15 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 04:06:57 PM: Inside GetP12Credential
+06-04-2023 04:06:57 PM: Credential-CN=111349114374532349253
+06-04-2023 04:06:57 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 04:07:39 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 04:40:12 PM: Inside GetP12Credential
+06-04-2023 04:40:13 PM: Credential-CN=111349114374532349253
+06-04-2023 04:40:13 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 04:40:23 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 04:40:56 PM: Inside GetP12Credential
+06-04-2023 04:40:56 PM: Credential-CN=111349114374532349253
+06-04-2023 04:40:56 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 04:42:18 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService
+06-04-2023 04:43:46 PM: Inside GetP12Credential
+06-04-2023 04:43:46 PM: Credential-CN=111349114374532349253
+06-04-2023 04:43:46 PM: Inside GetP12Credential 1System.Security.Cryptography.X509Certificates.PublicKey
+06-04-2023 04:44:03 PM: Inside GetWebsiteVisit 1Google.Apis.Analytics.v3.AnalyticsService

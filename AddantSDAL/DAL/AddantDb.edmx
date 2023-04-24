@@ -1,0 +1,1171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AddantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AddantLife">
+          <Key>
+            <PropertyRef Name="IdAddantLife" />
+          </Key>
+          <Property Name="IdAddantLife" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="250" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="CoverImgUrl" Type="nvarchar" MaxLength="100" />
+          <Property Name="BannerImgUrl" Type="nvarchar" MaxLength="100" />
+          <Property Name="ThumbNailInnerUrl" Type="nvarchar" MaxLength="100" />
+          <Property Name="InnerImgURl" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="IdEventCategory" Type="int" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="AddantLifeDetail">
+          <Key>
+            <PropertyRef Name="IdAddantLifeImage" />
+          </Key>
+          <Property Name="IdAddantLifeImage" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdAddantLife" Type="int" />
+          <Property Name="InnerCaption" Type="nvarchar" MaxLength="250" />
+          <Property Name="InnerImageUrl" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="IdBlog" />
+          </Key>
+          <Property Name="IdBlog" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConverImgUrl" Type="nvarchar" MaxLength="250" />
+          <Property Name="BannerImgUrl" Type="nvarchar" MaxLength="250" />
+          <Property Name="ContentUrl" Type="varchar" MaxLength="250" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="MainHeader" Type="nvarchar" MaxLength="250" />
+          <Property Name="HeaderDescription" Type="nvarchar" MaxLength="500" />
+          <Property Name="CreatedBy" Type="nvarchar" MaxLength="200" />
+          <Property Name="MinReadTime" Type="int" />
+          <Property Name="ProfilePicUrl" Type="nvarchar" MaxLength="100" />
+          <Property Name="BlogContent" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Candidate">
+          <Key>
+            <PropertyRef Name="IdCandidate" />
+          </Key>
+          <Property Name="IdCandidate" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdPosition" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="ResumeUrl" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="EmailTemplate">
+          <Key>
+            <PropertyRef Name="IdEmailTemplate" />
+          </Key>
+          <Property Name="IdEmailTemplate" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdTemplateType" Type="int" />
+          <Property Name="HeaderImageUrl" Type="nvarchar" MaxLength="250" />
+          <Property Name="Body" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="EmbedCode">
+          <Key>
+            <PropertyRef Name="IdEmbedCode" />
+          </Key>
+          <Property Name="IdEmbedCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdEmbedCodeType" Type="int" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="EmbedCodeType">
+          <Key>
+            <PropertyRef Name="IdCodeType" />
+          </Key>
+          <Property Name="IdCodeType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Enquiry">
+          <Key>
+            <PropertyRef Name="IdEnquiry" />
+          </Key>
+          <Property Name="IdEnquiry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="250" />
+          <Property Name="Message" Type="nvarchar" MaxLength="4000" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CategoryId" Type="int" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="EnquiryCategory">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="nchar" MaxLength="250" />
+          <Property Name="isActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="EventCategory">
+          <Key>
+            <PropertyRef Name="IdEventCategory" />
+          </Key>
+          <Property Name="IdEventCategory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="BannerImgUrl" Type="varchar" MaxLength="250" />
+          <Property Name="IdMainCategory" Type="int" />
+        </EntityType>
+        <EntityType Name="OTPHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OTP" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="4000" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="Status" Type="bit" />
+        </EntityType>
+        <EntityType Name="Page">
+          <Key>
+            <PropertyRef Name="IdPage" />
+          </Key>
+          <Property Name="IdPage" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="20" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="IdPosition" />
+          </Key>
+          <Property Name="IdPosition" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="JobId" Type="nvarchar" MaxLength="250" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Experience" Type="ntext" />
+          <Property Name="ClosingDate" Type="date" />
+          <Property Name="Location" Type="ntext" />
+          <Property Name="ReportsTo" Type="ntext" />
+          <Property Name="AboutCompany" Type="ntext" />
+          <Property Name="JobOverview" Type="ntext" />
+          <Property Name="KeyResponsibility" Type="ntext" />
+          <Property Name="Qualification" Type="ntext" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="PositionDetail">
+          <Key>
+            <PropertyRef Name="IdPositionDetail" />
+          </Key>
+          <Property Name="IdPositionDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdPosition" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="SubHeader" Type="nvarchar" MaxLength="100" />
+          <Property Name="SubHeaderContent" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="TemplateType">
+          <Key>
+            <PropertyRef Name="IdTemplateType" />
+          </Key>
+          <Property Name="IdTemplateType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="250" />
+          <Property Name="IdPage" Type="int" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="100" />
+          <Property Name="BloodGroup" Type="nvarchar" MaxLength="10" />
+          <Property Name="Dob" Type="datetime" />
+          <Property Name="Designation" Type="varchar" MaxLength="50" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" />
+          <Property Name="EmployeeID" Type="int" />
+          <Property Name="ProfileImageUrl" Type="nvarchar" MaxLength="100" />
+          <Property Name="Username" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IdUserRole" Type="int" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserPrivilege">
+          <Key>
+            <PropertyRef Name="IdUserPrivilege" />
+          </Key>
+          <Property Name="IdUserPrivilege" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatePage" Type="bit" />
+          <Property Name="Edit" Type="bit" />
+          <Property Name="ViewPage" Type="bit" />
+          <Property Name="DisablePage" Type="bit" />
+          <Property Name="IdPage" Type="int" />
+          <Property Name="IdUserRole" Type="int" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="StatusPage" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="IdUserRole" />
+          </Key>
+          <Property Name="IdUserRole" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <Association Name="FK__AddantLif__IdAdd__75A278F5">
+          <End Role="AddantLife" Type="Self.AddantLife" Multiplicity="0..1" />
+          <End Role="AddantLifeDetail" Type="Self.AddantLifeDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddantLife">
+              <PropertyRef Name="IdAddantLife" />
+            </Principal>
+            <Dependent Role="AddantLifeDetail">
+              <PropertyRef Name="IdAddantLife" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddantLif__IdEve__74AE54BC">
+          <End Role="EventCategory" Type="Self.EventCategory" Multiplicity="0..1" />
+          <End Role="AddantLife" Type="Self.AddantLife" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventCategory">
+              <PropertyRef Name="IdEventCategory" />
+            </Principal>
+            <Dependent Role="AddantLife">
+              <PropertyRef Name="IdEventCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Candidate__IdPos__76969D2E">
+          <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+          <End Role="Candidate" Type="Self.Candidate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="IdPosition" />
+            </Principal>
+            <Dependent Role="Candidate">
+              <PropertyRef Name="IdPosition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmailTemp__IdTem__778AC167">
+          <End Role="TemplateType" Type="Self.TemplateType" Multiplicity="0..1" />
+          <End Role="EmailTemplate" Type="Self.EmailTemplate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TemplateType">
+              <PropertyRef Name="IdTemplateType" />
+            </Principal>
+            <Dependent Role="EmailTemplate">
+              <PropertyRef Name="IdTemplateType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmbedCode__IdEmb__787EE5A0">
+          <End Role="EmbedCodeType" Type="Self.EmbedCodeType" Multiplicity="0..1" />
+          <End Role="EmbedCode" Type="Self.EmbedCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmbedCodeType">
+              <PropertyRef Name="IdCodeType" />
+            </Principal>
+            <Dependent Role="EmbedCode">
+              <PropertyRef Name="IdEmbedCodeType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PositionD__IdPos__797309D9">
+          <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+          <End Role="PositionDetail" Type="Self.PositionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="IdPosition" />
+            </Principal>
+            <Dependent Role="PositionDetail">
+              <PropertyRef Name="IdPosition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TemplateT__IdPag__7A672E12">
+          <End Role="Page" Type="Self.Page" Multiplicity="0..1" />
+          <End Role="TemplateType" Type="Self.TemplateType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Page">
+              <PropertyRef Name="IdPage" />
+            </Principal>
+            <Dependent Role="TemplateType">
+              <PropertyRef Name="IdPage" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__User__IdUserRole__7B5B524B">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="IdUserRole" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="IdUserRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserPrivi__IdPag__7C4F7684">
+          <End Role="Page" Type="Self.Page" Multiplicity="0..1" />
+          <End Role="UserPrivilege" Type="Self.UserPrivilege" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Page">
+              <PropertyRef Name="IdPage" />
+            </Principal>
+            <Dependent Role="UserPrivilege">
+              <PropertyRef Name="IdPage" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserPrivi__IdUse__7D439ABD">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="0..1" />
+          <End Role="UserPrivilege" Type="Self.UserPrivilege" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="IdUserRole" />
+            </Principal>
+            <Dependent Role="UserPrivilege">
+              <PropertyRef Name="IdUserRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AddantModelStoreContainer">
+          <EntitySet Name="AddantLife" EntityType="Self.AddantLife" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AddantLifeDetail" EntityType="Self.AddantLifeDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Candidate" EntityType="Self.Candidate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmailTemplate" EntityType="Self.EmailTemplate" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmbedCode" EntityType="Self.EmbedCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmbedCodeType" EntityType="Self.EmbedCodeType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Enquiry" EntityType="Self.Enquiry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EnquiryCategory" EntityType="Self.EnquiryCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventCategory" EntityType="Self.EventCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OTPHistory" EntityType="Self.OTPHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Page" EntityType="Self.Page" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Position" EntityType="Self.Position" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PositionDetail" EntityType="Self.PositionDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TemplateType" EntityType="Self.TemplateType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserPrivilege" EntityType="Self.UserPrivilege" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__AddantLif__IdAdd__75A278F5" Association="Self.FK__AddantLif__IdAdd__75A278F5">
+            <End Role="AddantLife" EntitySet="AddantLife" />
+            <End Role="AddantLifeDetail" EntitySet="AddantLifeDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddantLif__IdEve__74AE54BC" Association="Self.FK__AddantLif__IdEve__74AE54BC">
+            <End Role="EventCategory" EntitySet="EventCategory" />
+            <End Role="AddantLife" EntitySet="AddantLife" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Candidate__IdPos__76969D2E" Association="Self.FK__Candidate__IdPos__76969D2E">
+            <End Role="Position" EntitySet="Position" />
+            <End Role="Candidate" EntitySet="Candidate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmailTemp__IdTem__778AC167" Association="Self.FK__EmailTemp__IdTem__778AC167">
+            <End Role="TemplateType" EntitySet="TemplateType" />
+            <End Role="EmailTemplate" EntitySet="EmailTemplate" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmbedCode__IdEmb__787EE5A0" Association="Self.FK__EmbedCode__IdEmb__787EE5A0">
+            <End Role="EmbedCodeType" EntitySet="EmbedCodeType" />
+            <End Role="EmbedCode" EntitySet="EmbedCode" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PositionD__IdPos__797309D9" Association="Self.FK__PositionD__IdPos__797309D9">
+            <End Role="Position" EntitySet="Position" />
+            <End Role="PositionDetail" EntitySet="PositionDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TemplateT__IdPag__7A672E12" Association="Self.FK__TemplateT__IdPag__7A672E12">
+            <End Role="Page" EntitySet="Page" />
+            <End Role="TemplateType" EntitySet="TemplateType" />
+          </AssociationSet>
+          <AssociationSet Name="FK__User__IdUserRole__7B5B524B" Association="Self.FK__User__IdUserRole__7B5B524B">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserPrivi__IdPag__7C4F7684" Association="Self.FK__UserPrivi__IdPag__7C4F7684">
+            <End Role="Page" EntitySet="Page" />
+            <End Role="UserPrivilege" EntitySet="UserPrivilege" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserPrivi__IdUse__7D439ABD" Association="Self.FK__UserPrivi__IdUse__7D439ABD">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="UserPrivilege" EntitySet="UserPrivilege" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AddantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PositionDetail">
+          <Key>
+            <PropertyRef Name="IdPositionDetail" />
+          </Key>
+          <Property Name="IdPositionDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPosition" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="SubHeader" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SubHeaderContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Position" Relationship="AddantModel.FK__PositionD__IdPos__44FF419A" FromRole="PositionDetail" ToRole="Position" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="AddantEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PositionDetails" EntityType="Self.PositionDetail" />
+          <EntitySet Name="EmbedCodes" EntityType="AddantModel.EmbedCode" />
+          <EntitySet Name="EmbedCodeTypes" EntityType="AddantModel.EmbedCodeType" />
+          <AssociationSet Name="FK__EmbedCode__IdEmb__36470DEF" Association="AddantModel.FK__EmbedCode__IdEmb__36470DEF">
+            <End Role="EmbedCodeType" EntitySet="EmbedCodeTypes" />
+            <End Role="EmbedCode" EntitySet="EmbedCodes" />
+          </AssociationSet>
+          <EntitySet Name="EmailTemplates" EntityType="AddantModel.EmailTemplate" />
+          <EntitySet Name="Pages" EntityType="AddantModel.Page" />
+          <EntitySet Name="TemplateTypes" EntityType="AddantModel.TemplateType" />
+          <AssociationSet Name="FK__EmailTemp__IdTem__43A1090D" Association="AddantModel.FK__EmailTemp__IdTem__43A1090D">
+            <End Role="TemplateType" EntitySet="TemplateTypes" />
+            <End Role="EmailTemplate" EntitySet="EmailTemplates" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TemplateT__IdPag__3FD07829" Association="AddantModel.FK__TemplateT__IdPag__3FD07829">
+            <End Role="Page" EntitySet="Pages" />
+            <End Role="TemplateType" EntitySet="TemplateTypes" />
+          </AssociationSet>
+          <EntitySet Name="AddantLifeDetails" EntityType="AddantModel.AddantLifeDetail" />
+          <EntitySet Name="UserRoles" EntityType="AddantModel.UserRole" />
+          <EntitySet Name="EventCategories" EntityType="AddantModel.EventCategory" />
+          <EntitySet Name="Enquiries" EntityType="AddantModel.Enquiry" />
+          <EntitySet Name="EnquiryCategories" EntityType="AddantModel.EnquiryCategory" />
+          <AssociationSet Name="FK__Enquiry__Categor__1881A0DE" Association="AddantModel.FK__Enquiry__Categor__1881A0DE">
+            <End Role="EnquiryCategory" EntitySet="EnquiryCategories" />
+            <End Role="Enquiry" EntitySet="Enquiries" />
+          </AssociationSet>
+          <EntitySet Name="Positions" EntityType="AddantModel.Position" />
+          <AssociationSet Name="FK__PositionD__IdPos__44FF419A" Association="AddantModel.FK__PositionD__IdPos__44FF419A">
+            <End Role="Position" EntitySet="Positions" />
+            <End Role="PositionDetail" EntitySet="PositionDetails" />
+          </AssociationSet>
+          <EntitySet Name="OTPHistories" EntityType="AddantModel.OTPHistory" />
+          <EntitySet Name="AddantLives" EntityType="AddantModel.AddantLife" />
+          <AssociationSet Name="FK__AddantLif__IdAdd__75A278F5" Association="AddantModel.FK__AddantLif__IdAdd__75A278F5">
+            <End Role="AddantLife" EntitySet="AddantLives" />
+            <End Role="AddantLifeDetail" EntitySet="AddantLifeDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__AddantLif__IdEve__74AE54BC" Association="AddantModel.FK__AddantLif__IdEve__74AE54BC">
+            <End Role="EventCategory" EntitySet="EventCategories" />
+            <End Role="AddantLife" EntitySet="AddantLives" />
+          </AssociationSet>
+          <EntitySet Name="Blogs" EntityType="AddantModel.Blog" />
+          <EntitySet Name="Candidates" EntityType="AddantModel.Candidate" />
+          <AssociationSet Name="FK__Candidate__IdPos__76969D2E" Association="AddantModel.FK__Candidate__IdPos__76969D2E">
+            <End Role="Position" EntitySet="Positions" />
+            <End Role="Candidate" EntitySet="Candidates" />
+          </AssociationSet>
+          <EntitySet Name="Users" EntityType="AddantModel.User" />
+          <EntitySet Name="UserPrivileges" EntityType="AddantModel.UserPrivilege" />
+          <AssociationSet Name="FK__UserPrivi__IdPag__7C4F7684" Association="AddantModel.FK__UserPrivi__IdPag__7C4F7684">
+            <End Role="Page" EntitySet="Pages" />
+            <End Role="UserPrivilege" EntitySet="UserPrivileges" />
+          </AssociationSet>
+          <AssociationSet Name="FK__User__IdUserRole__7B5B524B" Association="AddantModel.FK__User__IdUserRole__7B5B524B">
+            <End Role="UserRole" EntitySet="UserRoles" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserPrivi__IdUse__7D439ABD" Association="AddantModel.FK__UserPrivi__IdUse__7D439ABD">
+            <End Role="UserRole" EntitySet="UserRoles" />
+            <End Role="UserPrivilege" EntitySet="UserPrivileges" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="EmbedCode">
+          <Key>
+            <PropertyRef Name="IdEmbedCode" />
+          </Key>
+          <Property Name="IdEmbedCode" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdEmbedCodeType" Type="Int32" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <NavigationProperty Name="EmbedCodeType" Relationship="AddantModel.FK__EmbedCode__IdEmb__36470DEF" FromRole="EmbedCode" ToRole="EmbedCodeType" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="EmbedCodeType">
+          <Key>
+            <PropertyRef Name="IdCodeType" />
+          </Key>
+          <Property Name="IdCodeType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EmbedCodes" Relationship="AddantModel.FK__EmbedCode__IdEmb__36470DEF" FromRole="EmbedCodeType" ToRole="EmbedCode" />
+        </EntityType>
+        <Association Name="FK__EmbedCode__IdEmb__36470DEF">
+          <End Type="AddantModel.EmbedCodeType" Role="EmbedCodeType" Multiplicity="0..1" />
+          <End Type="AddantModel.EmbedCode" Role="EmbedCode" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmbedCodeType">
+              <PropertyRef Name="IdCodeType" />
+            </Principal>
+            <Dependent Role="EmbedCode">
+              <PropertyRef Name="IdEmbedCodeType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="EmailTemplate">
+          <Key>
+            <PropertyRef Name="IdEmailTemplate" />
+          </Key>
+          <Property Name="IdEmailTemplate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdTemplateType" Type="Int32" />
+          <Property Name="HeaderImageUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Body" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <NavigationProperty Name="TemplateType" Relationship="AddantModel.FK__EmailTemp__IdTem__43A1090D" FromRole="EmailTemplate" ToRole="TemplateType" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Page">
+          <Key>
+            <PropertyRef Name="IdPage" />
+          </Key>
+          <Property Name="IdPage" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <NavigationProperty Name="TemplateTypes" Relationship="AddantModel.FK__TemplateT__IdPag__3FD07829" FromRole="Page" ToRole="TemplateType" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="UserPrivileges" Relationship="AddantModel.FK__UserPrivi__IdPag__7C4F7684" FromRole="Page" ToRole="UserPrivilege" />
+        </EntityType>
+        <EntityType Name="TemplateType">
+          <Key>
+            <PropertyRef Name="IdTemplateType" />
+          </Key>
+          <Property Name="IdTemplateType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IdPage" Type="Int32" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="EmailTemplates" Relationship="AddantModel.FK__EmailTemp__IdTem__43A1090D" FromRole="TemplateType" ToRole="EmailTemplate" />
+          <NavigationProperty Name="Page" Relationship="AddantModel.FK__TemplateT__IdPag__3FD07829" FromRole="TemplateType" ToRole="Page" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <Association Name="FK__EmailTemp__IdTem__43A1090D">
+          <End Type="AddantModel.TemplateType" Role="TemplateType" Multiplicity="0..1" />
+          <End Type="AddantModel.EmailTemplate" Role="EmailTemplate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TemplateType">
+              <PropertyRef Name="IdTemplateType" />
+            </Principal>
+            <Dependent Role="EmailTemplate">
+              <PropertyRef Name="IdTemplateType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TemplateT__IdPag__3FD07829">
+          <End Type="AddantModel.Page" Role="Page" Multiplicity="0..1" />
+          <End Type="AddantModel.TemplateType" Role="TemplateType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Page">
+              <PropertyRef Name="IdPage" />
+            </Principal>
+            <Dependent Role="TemplateType">
+              <PropertyRef Name="IdPage" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AddantLifeDetail">
+          <Key>
+            <PropertyRef Name="IdAddantLifeImage" />
+          </Key>
+          <Property Name="IdAddantLifeImage" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdAddantLife" Type="Int32" />
+          <Property Name="InnerCaption" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="InnerImageUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <NavigationProperty Name="AddantLife" Relationship="AddantModel.FK__AddantLif__IdAdd__75A278F5" FromRole="AddantLifeDetail" ToRole="AddantLife" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="IdUserRole" />
+          </Key>
+          <Property Name="IdUserRole" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Users" Relationship="AddantModel.FK__User__IdUserRole__7B5B524B" FromRole="UserRole" ToRole="User" />
+          <NavigationProperty Name="UserPrivileges" Relationship="AddantModel.FK__UserPrivi__IdUse__7D439ABD" FromRole="UserRole" ToRole="UserPrivilege" />
+        </EntityType>
+        <EntityType Name="EventCategory">
+          <Key>
+            <PropertyRef Name="IdEventCategory" />
+          </Key>
+          <Property Name="IdEventCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="BannerImgUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IdMainCategory" Type="Int32" />
+          <NavigationProperty Name="AddantLives" Relationship="AddantModel.FK__AddantLif__IdEve__74AE54BC" FromRole="EventCategory" ToRole="AddantLife" />
+        </EntityType>
+        <EntityType Name="Enquiry">
+          <Key>
+            <PropertyRef Name="IdEnquiry" />
+          </Key>
+          <Property Name="IdEnquiry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Subject" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CategoryId" Type="Int32" />
+          <NavigationProperty Name="EnquiryCategory" Relationship="AddantModel.FK__Enquiry__Categor__1881A0DE" FromRole="Enquiry" ToRole="EnquiryCategory" />
+          <Property Name="Deleted" Type="Boolean" />
+          </EntityType>
+        <EntityType Name="EnquiryCategory">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" MaxLength="250" FixedLength="true" Unicode="true" />
+          <Property Name="isActive" Type="Boolean" />
+          <NavigationProperty Name="Enquiries" Relationship="AddantModel.FK__Enquiry__Categor__1881A0DE" FromRole="EnquiryCategory" ToRole="Enquiry" />
+        </EntityType>
+        <Association Name="FK__Enquiry__Categor__1881A0DE">
+          <End Type="AddantModel.EnquiryCategory" Role="EnquiryCategory" Multiplicity="0..1" />
+          <End Type="AddantModel.Enquiry" Role="Enquiry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EnquiryCategory">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Enquiry">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="IdPosition" />
+          </Key>
+          <Property Name="IdPosition" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="JobId" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Experience" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClosingDate" Type="DateTime" Precision="0" />
+          <Property Name="Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ReportsTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AboutCompany" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="JobOverview" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="KeyResponsibility" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PositionDetails" Relationship="AddantModel.FK__PositionD__IdPos__44FF419A" FromRole="Position" ToRole="PositionDetail" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Candidates" Relationship="AddantModel.FK__Candidate__IdPos__76969D2E" FromRole="Position" ToRole="Candidate" />
+        </EntityType>
+        <Association Name="FK__PositionD__IdPos__44FF419A">
+          <End Type="AddantModel.Position" Role="Position" Multiplicity="0..1" />
+          <End Type="AddantModel.PositionDetail" Role="PositionDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="IdPosition" />
+            </Principal>
+            <Dependent Role="PositionDetail">
+              <PropertyRef Name="IdPosition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="OTPHistory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OTP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="TimeStamp" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="AddantLife">
+          <Key>
+            <PropertyRef Name="IdAddantLife" />
+          </Key>
+          <Property Name="IdAddantLife" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CoverImgUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BannerImgUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ThumbNailInnerUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="InnerImgURl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="IdEventCategory" Type="Int32" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="AddantLifeDetails" Relationship="AddantModel.FK__AddantLif__IdAdd__75A278F5" FromRole="AddantLife" ToRole="AddantLifeDetail" />
+          <NavigationProperty Name="EventCategory" Relationship="AddantModel.FK__AddantLif__IdEve__74AE54BC" FromRole="AddantLife" ToRole="EventCategory" />
+        </EntityType>
+        <Association Name="FK__AddantLif__IdAdd__75A278F5">
+          <End Type="AddantModel.AddantLife" Role="AddantLife" Multiplicity="0..1" />
+          <End Type="AddantModel.AddantLifeDetail" Role="AddantLifeDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddantLife">
+              <PropertyRef Name="IdAddantLife" />
+            </Principal>
+            <Dependent Role="AddantLifeDetail">
+              <PropertyRef Name="IdAddantLife" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__AddantLif__IdEve__74AE54BC">
+          <End Type="AddantModel.EventCategory" Role="EventCategory" Multiplicity="0..1" />
+          <End Type="AddantModel.AddantLife" Role="AddantLife" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventCategory">
+              <PropertyRef Name="IdEventCategory" />
+            </Principal>
+            <Dependent Role="AddantLife">
+              <PropertyRef Name="IdEventCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Blog">
+          <Key>
+            <PropertyRef Name="IdBlog" />
+          </Key>
+          <Property Name="IdBlog" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConverImgUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="BannerImgUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ContentUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="MainHeader" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="HeaderDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="MinReadTime" Type="Int32" />
+          <Property Name="ProfilePicUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BlogContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Candidate">
+          <Key>
+            <PropertyRef Name="IdCandidate" />
+          </Key>
+          <Property Name="IdCandidate" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdPosition" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ResumeUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Position" Relationship="AddantModel.FK__Candidate__IdPos__76969D2E" FromRole="Candidate" ToRole="Position" />
+        </EntityType>
+        <Association Name="FK__Candidate__IdPos__76969D2E">
+          <End Type="AddantModel.Position" Role="Position" Multiplicity="0..1" />
+          <End Type="AddantModel.Candidate" Role="Candidate" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="IdPosition" />
+            </Principal>
+            <Dependent Role="Candidate">
+              <PropertyRef Name="IdPosition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="BloodGroup" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Dob" Type="DateTime" Precision="3" />
+          <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EmployeeID" Type="Int32" />
+          <Property Name="ProfileImageUrl" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IdUserRole" Type="Int32" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="UserRole" Relationship="AddantModel.FK__User__IdUserRole__7B5B524B" FromRole="User" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="UserPrivilege">
+          <Key>
+            <PropertyRef Name="IdUserPrivilege" />
+          </Key>
+          <Property Name="IdUserPrivilege" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatePage" Type="Boolean" />
+          <Property Name="Edit" Type="Boolean" />
+          <Property Name="ViewPage" Type="Boolean" />
+          <Property Name="DisablePage" Type="Boolean" />
+          <Property Name="IdPage" Type="Int32" />
+          <Property Name="IdUserRole" Type="Int32" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="StatusPage" Type="Boolean" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Page" Relationship="AddantModel.FK__UserPrivi__IdPag__7C4F7684" FromRole="UserPrivilege" ToRole="Page" />
+          <NavigationProperty Name="UserRole" Relationship="AddantModel.FK__UserPrivi__IdUse__7D439ABD" FromRole="UserPrivilege" ToRole="UserRole" />
+        </EntityType>
+        <Association Name="FK__UserPrivi__IdPag__7C4F7684">
+          <End Type="AddantModel.Page" Role="Page" Multiplicity="0..1" />
+          <End Type="AddantModel.UserPrivilege" Role="UserPrivilege" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Page">
+              <PropertyRef Name="IdPage" />
+            </Principal>
+            <Dependent Role="UserPrivilege">
+              <PropertyRef Name="IdPage" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__User__IdUserRole__7B5B524B">
+          <End Type="AddantModel.UserRole" Role="UserRole" Multiplicity="0..1" />
+          <End Type="AddantModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="IdUserRole" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="IdUserRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserPrivi__IdUse__7D439ABD">
+          <End Type="AddantModel.UserRole" Role="UserRole" Multiplicity="0..1" />
+          <End Type="AddantModel.UserPrivilege" Role="UserPrivilege" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="IdUserRole" />
+            </Principal>
+            <Dependent Role="UserPrivilege">
+              <PropertyRef Name="IdUserRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AddantModelStoreContainer" CdmEntityContainer="AddantEntities1">
+          <EntitySetMapping Name="PositionDetails">
+            <EntityTypeMapping TypeName="AddantModel.PositionDetail">
+              <MappingFragment StoreEntitySet="PositionDetail">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IdPositionDetail" ColumnName="IdPositionDetail" />
+                <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="SubHeader" ColumnName="SubHeader" />
+                <ScalarProperty Name="SubHeaderContent" ColumnName="SubHeaderContent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmbedCodes">
+            <EntityTypeMapping TypeName="AddantModel.EmbedCode">
+              <MappingFragment StoreEntitySet="EmbedCode">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="IdEmbedCodeType" ColumnName="IdEmbedCodeType" />
+                <ScalarProperty Name="IdEmbedCode" ColumnName="IdEmbedCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmbedCodeTypes">
+            <EntityTypeMapping TypeName="AddantModel.EmbedCodeType">
+              <MappingFragment StoreEntitySet="EmbedCodeType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdCodeType" ColumnName="IdCodeType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmailTemplates">
+            <EntityTypeMapping TypeName="AddantModel.EmailTemplate">
+              <MappingFragment StoreEntitySet="EmailTemplate">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Body" ColumnName="Body" />
+                <ScalarProperty Name="HeaderImageUrl" ColumnName="HeaderImageUrl" />
+                <ScalarProperty Name="IdTemplateType" ColumnName="IdTemplateType" />
+                <ScalarProperty Name="IdEmailTemplate" ColumnName="IdEmailTemplate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pages">
+            <EntityTypeMapping TypeName="AddantModel.Page">
+              <MappingFragment StoreEntitySet="Page">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdPage" ColumnName="IdPage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TemplateTypes">
+            <EntityTypeMapping TypeName="AddantModel.TemplateType">
+              <MappingFragment StoreEntitySet="TemplateType">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IdPage" ColumnName="IdPage" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdTemplateType" ColumnName="IdTemplateType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AddantLifeDetails">
+            <EntityTypeMapping TypeName="AddantModel.AddantLifeDetail">
+              <MappingFragment StoreEntitySet="AddantLifeDetail">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="InnerImageUrl" ColumnName="InnerImageUrl" />
+                <ScalarProperty Name="InnerCaption" ColumnName="InnerCaption" />
+                <ScalarProperty Name="IdAddantLife" ColumnName="IdAddantLife" />
+                <ScalarProperty Name="IdAddantLifeImage" ColumnName="IdAddantLifeImage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="AddantModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdUserRole" ColumnName="IdUserRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventCategories">
+            <EntityTypeMapping TypeName="AddantModel.EventCategory">
+              <MappingFragment StoreEntitySet="EventCategory">
+                <ScalarProperty Name="IdMainCategory" ColumnName="IdMainCategory" />
+                <ScalarProperty Name="BannerImgUrl" ColumnName="BannerImgUrl" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdEventCategory" ColumnName="IdEventCategory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Enquiries">
+            <EntityTypeMapping TypeName="AddantModel.Enquiry">
+              <MappingFragment StoreEntitySet="Enquiry">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="IdEnquiry" ColumnName="IdEnquiry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EnquiryCategories">
+            <EntityTypeMapping TypeName="AddantModel.EnquiryCategory">
+              <MappingFragment StoreEntitySet="EnquiryCategory">
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Positions">
+            <EntityTypeMapping TypeName="AddantModel.Position">
+              <MappingFragment StoreEntitySet="Position">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="KeyResponsibility" ColumnName="KeyResponsibility" />
+                <ScalarProperty Name="JobOverview" ColumnName="JobOverview" />
+                <ScalarProperty Name="AboutCompany" ColumnName="AboutCompany" />
+                <ScalarProperty Name="ReportsTo" ColumnName="ReportsTo" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="ClosingDate" ColumnName="ClosingDate" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OTPHistories">
+            <EntityTypeMapping TypeName="AddantModel.OTPHistory">
+              <MappingFragment StoreEntitySet="OTPHistory">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OTP" ColumnName="OTP" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AddantLives">
+            <EntityTypeMapping TypeName="AddantModel.AddantLife">
+              <MappingFragment StoreEntitySet="AddantLife">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IdEventCategory" ColumnName="IdEventCategory" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="InnerImgURl" ColumnName="InnerImgURl" />
+                <ScalarProperty Name="ThumbNailInnerUrl" ColumnName="ThumbNailInnerUrl" />
+                <ScalarProperty Name="BannerImgUrl" ColumnName="BannerImgUrl" />
+                <ScalarProperty Name="CoverImgUrl" ColumnName="CoverImgUrl" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="IdAddantLife" ColumnName="IdAddantLife" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Blogs">
+            <EntityTypeMapping TypeName="AddantModel.Blog">
+              <MappingFragment StoreEntitySet="Blog">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="BlogContent" ColumnName="BlogContent" />
+                <ScalarProperty Name="ProfilePicUrl" ColumnName="ProfilePicUrl" />
+                <ScalarProperty Name="MinReadTime" ColumnName="MinReadTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="HeaderDescription" ColumnName="HeaderDescription" />
+                <ScalarProperty Name="MainHeader" ColumnName="MainHeader" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="ContentUrl" ColumnName="ContentUrl" />
+                <ScalarProperty Name="BannerImgUrl" ColumnName="BannerImgUrl" />
+                <ScalarProperty Name="ConverImgUrl" ColumnName="ConverImgUrl" />
+                <ScalarProperty Name="IdBlog" ColumnName="IdBlog" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Candidates">
+            <EntityTypeMapping TypeName="AddantModel.Candidate">
+              <MappingFragment StoreEntitySet="Candidate">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ResumeUrl" ColumnName="ResumeUrl" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="IdPosition" ColumnName="IdPosition" />
+                <ScalarProperty Name="IdCandidate" ColumnName="IdCandidate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AddantModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IdUserRole" ColumnName="IdUserRole" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="ProfileImageUrl" ColumnName="ProfileImageUrl" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPrivileges">
+            <EntityTypeMapping TypeName="AddantModel.UserPrivilege">
+              <MappingFragment StoreEntitySet="UserPrivilege">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="StatusPage" ColumnName="StatusPage" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="IdUserRole" ColumnName="IdUserRole" />
+                <ScalarProperty Name="IdPage" ColumnName="IdPage" />
+                <ScalarProperty Name="DisablePage" ColumnName="DisablePage" />
+                <ScalarProperty Name="ViewPage" ColumnName="ViewPage" />
+                <ScalarProperty Name="Edit" ColumnName="Edit" />
+                <ScalarProperty Name="CreatePage" ColumnName="CreatePage" />
+                <ScalarProperty Name="IdUserPrivilege" ColumnName="IdUserPrivilege" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,4 @@
+28-12-2022 10:31:57 PM: Could not find file 'C:\Users\fathima.s\source\repos\Addantservice1\AddantService\AddantService\AddantService\ AcknowledgeEnquiry.html'.
+28-12-2022 11:00:09 PM: Inside ComposeBlog()
+28-12-2022 11:03:48 PM: Inside ComposeBlog()
+28-12-2022 11:48:54 PM: An invalid character was found in the mail header: '<'.

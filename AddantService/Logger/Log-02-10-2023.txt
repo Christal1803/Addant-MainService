@@ -1,0 +1,5 @@
+10-02-2023 09:24:35 AM: Nullable object must have a value.
+10-02-2023 11:15:29 AM: Inside ComposeBlog()
+10-02-2023 11:15:30 AM: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Must issue a STARTTLS command first. a11-20020a170902710b00b001994a63d726sm2437281pll.298 - gsmtp
+10-02-2023 11:16:21 AM: Inside ComposeBlog()
+10-02-2023 11:21:11 AM: Inside ComposeBlog()

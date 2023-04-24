@@ -1,0 +1,178 @@
+   [Route("WalletPass")]
+        [HttpGet]
+        public HttpResponseMessage GetWalletPass(long playerID)
+        {
+            if (playerID > 0)
+            {
+                var player = _playerRepository.GetPlayer(playerID);
+                if (player != null)
+                {
+                    var res = CreateWalletPass(player);
+                    if (res != null)
+                    {
+                        var response = Request.CreateResponse(HttpStatusCode.OK);
+                        var content = new StreamContent(new FileStream(res, FileMode.Open, FileAccess.Read));
+                        response.Content = content;
+                        //response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
+                        response.Content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/vnd.apple.pkpass");
+                        response.Content.Headers.ContentDisposition = new System.Net.Http.Headers.ContentDispositionHeaderValue("attachment")
+                        {
+                            FileName = $"playerpass_{player.PlayerID}.pkpass"
+                        };
+                        response.Content.Headers.LastModified = DateTime.Now;
+                        return response;
+                    }
+                }
+            }
+
+            return Request.CreateResponse(HttpStatusCode.NotFound);
+        }
+
+
+
+------------------------------------
+controller
+ private string CreateWalletPass(CertusDALv2.DTO.PlayerDTO player)
+        {
+            var retval = string.Empty;
+            try
+            {
+
+                QrCoder.QrCodeDataObject qrCodeDataObject = new QrCoder.QrCodeDataObject();
+                QrCoder.Player pl = new QrCoder.Player()
+                {
+                    Birthdate = null,
+                    FirstName = player.FirstName,
+                    LastName = player.LastName,
+                    MaidenName = null,
+                    Nationality = player.Nationality,
+                    PlayerID = player.PlayerID,
+                    CardNumber = player.CardNumber.ToString(),
+                    Gender = "M"
+                };
+
+                if (player.BirthDate != null)
+                    pl.Birthdate = player.BirthDate?.ToString("dd/MM/yyyy");
+
+                if (!player.Gender)
+                    pl.Gender = "F";
+
+                qrCodeDataObject.Player = pl;
+
+                //var qrCode = _cardRepository.GetCard(sub.Cards?.Find(x => x.MediaTypeID == 2)?.CardID ?? 0);
+                var qrCode = QrCoder.CertusQrCoder.GetQrCodeEncryptedString(qrCodeDataObject, "123456789");
+                if (qrCode != null)
+                {
+                    var path = HttpContext.Current.Server.MapPath($"~/Uploads/PASS/temp");
+                    if (!Directory.Exists(path))
+                        Directory.CreateDirectory(path);
+
+                    var filePath = Path.Combine(path, $"wpass_{player.PlayerID}.pkpass");
+
+                    if (!Directory.Exists(path))
+                        Directory.CreateDirectory(path);
+
+                    if (File.Exists(filePath))
+                        File.Delete(filePath);
+
+                   // var me = _monitorElementRepository.GetMonitorElement(ConfigurationManager.AppSettings["ProjectURL"], sub.TreeNodeID ?? 0, false);
+
+                    path = HttpContext.Current.Server.MapPath($"~/Uploads/Certificates");
+
+                    PassGenerator generator = new PassGenerator();
+                    PassGeneratorRequest request = new PassGeneratorRequest();
+                    request.PassTypeIdentifier = "pass.com.horizon.subscription";
+                    request.TeamIdentifier = "EPDM5MHMEY";
+                    request.SerialNumber = "1";
+                    request.Description = "Virtual Card";
+                    request.OrganizationName = "Mentis";
+                   // request.LogoText = GetPaddedString("Pass", 25, 2);
+
+
+                    request.BackgroundColor = "#FFFFFF";
+                    request.LabelColor = "#000000";
+                    request.ForegroundColor = "#000000";
+
+                    byte[] certData = File.ReadAllBytes(Path.Combine(path, "subpass.p12"));
+                    request.Certificate = certData;
+                    request.CertificatePassword = "Horizon@125";
+
+                    certData = File.ReadAllBytes(Path.Combine(path, "AppleWWDRCA.cer"));
+                    request.AppleWWDRCACertificate = certData;
+
+                    path = string.Empty;
+                    var logoPath = string.Empty;
+
+                    path = HttpContext.Current.Server.MapPath($"~/Uploads/Logo");
+                    logoPath = Path.Combine(path, "casino_logo.png");
+
+
+                    if (!string.IsNullOrEmpty(logoPath))
+                    {
+                        request.Images.Add(PassbookImage.Icon, System.IO.File.ReadAllBytes(logoPath));
+                        request.Images.Add(PassbookImage.Icon2X, System.IO.File.ReadAllBytes(logoPath));
+                        request.Images.Add(PassbookImage.Icon3X, System.IO.File.ReadAllBytes(logoPath));
+
+
+                        request.Images.Add(PassbookImage.Logo, System.IO.File.ReadAllBytes(logoPath));
+                        request.Images.Add(PassbookImage.Logo2X, System.IO.File.ReadAllBytes(logoPath));
+                        request.Images.Add(PassbookImage.Logo3X, System.IO.File.ReadAllBytes(logoPath));
+                    }
+
+                    request.Style = PassStyle.EventTicket;
+
+                    request.AddHeaderField(new StandardField("header1", string.Empty, GetPaddedString(DateTime.Now.ToString("dd-MM-yyyy"), 30, 1)));
+                    request.AddPrimaryField(new StandardField("parking", "", $"Certus Casino"));
+                    //if (me != null)
+                    //{
+                    //    if (!string.IsNullOrEmpty(me.Address))
+                    //        request.AddPrimaryField(new StandardField("parking", "", $"{ me.Name }, {me.Address}"));
+                    //    else
+                    //        request.AddPrimaryField(new StandardField("parking", "", $"{ me.Name }"));
+                    //}
+
+                    //var grp = _groupRepository.GetGroup(sub.GroupID ?? 0);
+                    //if (grp != null)
+                    //    request.AddSecondaryField(new StandardField("group-name", GetPaddedString("Group", 20, 2), grp.Name));
+                    //else
+                    request.AddSecondaryField(new StandardField("group-name", string.Empty, string.Empty));
+
+
+                    //var cust = _customerRepository.GetCustomer(sub.CustomerID);
+                    if (player != null)
+                        request.AddAuxiliaryField(new StandardField("passname", "Name", $"{player.FirstName} {player.LastName}"));
+                    else
+                        request.AddAuxiliaryField(new StandardField("passname", string.Empty, string.Empty));
+
+
+                    //var vhls = sub.Cards?.FindAll(x => x.MediaTypeID == 5).Select(x => x.CardID).ToList();
+                    //var plates = _customerRepository.GetVehicles(vhls).Select(x => x.PlateNumber.ToUpper()).ToArray();
+
+                    //if (plates.Length > 0)
+                    //    request.AddAuxiliaryField(new StandardField("plates", "Plates", string.Join(",", plates)));
+                    //else
+                        request.AddAuxiliaryField(new StandardField("plates", string.Empty, string.Empty));
+
+                    request.TransitType = TransitType.PKTransitTypeAir;
+
+                    var extraText = string.Empty;
+                    //if (sub.EndDate != null)
+                    //{
+                    //    var ed = (DateTime)sub.EndDate;
+                    //    extraText = $"Expire on {ed.ToString("dd-MM-yyyy HH:mm")}";
+                    //}
+
+                    request.SetBarcode(BarcodeType.PKBarcodeFormatQR, qrCode, "ISO-8859-1", extraText);
+
+                    byte[] generatedPass = generator.Generate(request);
+
+                    File.WriteAllBytes(filePath, generatedPass);
+                    retval = filePath;
+                    //https://github.com/tomasmcguinness/dotnet-passbook
+
+                }
+            }
+            catch { };
+
+            return retval;
+        }
