@@ -33,7 +33,7 @@ namespace AddantSDAL.DAL
         {
             try
             {
-                Logger.WriteLog($"GetP12Credential case 1 from {from} {p12FilePath} {accountEmail}");
+                //Logger.WriteLog($"GetP12Credential case 1 from {from} {p12FilePath} {accountEmail}");
                 //    using (var certificate = new X509Certificate2(p12FilePath, "notasecret", X509KeyStorageFlags.MachineKeySet | 
                 //      X509KeyStorageFlags.Exportable))
                 using (var certificate = new X509Certificate2(p12FilePath, "notasecret",
@@ -72,8 +72,6 @@ namespace AddantSDAL.DAL
             try
             {
                 var credential = GetP12Credential(Path.Combine(HttpContext.Current.Server.MapPath("~/Log"), "adddantwebsite-86b8d564d794.p12"), "addant@adddantwebsite.iam.gserviceaccount.com", "isCountrywise");
-                if (credential == null)
-                    Logger.WriteLog("GetWebsiteVisitCountrywise Case1" + JsonConvert.SerializeObject(credential));
                 using (var service = new AnalyticsService(new BaseClientService.Initializer()
                 {
                     HttpClientInitializer = credential,
@@ -182,7 +180,7 @@ namespace AddantSDAL.DAL
             }
         }
 
-        public static DALResult<IList<IList<string>>> GetWebsiteVisit1(int Category, string startDate = "today", string endDate = "today")
+        public static DALResult<List<List<object>>> GetWebsiteVisit1(int Category, string startDate = "today", string endDate = "today")
         {
             DataTable dataT = new DataTable();
             DataTable dataU = new DataTable();
@@ -407,22 +405,31 @@ namespace AddantSDAL.DAL
                             }
                         }
                     }
-                    IList<IList<string>> resultList = new List<IList<string>>();
+
+
+                    List<List<object>> resultList = new List<List<object>>();
                     foreach (DataRow row in dataU.Rows)
                     {
-                        IList<string> rowList = new List<string>();
+                        List<object> rowList = new List<object>();
                         foreach (var item in row.ItemArray)
                         {
                             rowList.Add(item.ToString());
                         }
                         resultList.Add(rowList);
                     }
-                    IList<string> oIList1 = new List<string>() // new
-                {
-                    (Category==1?"Daily":Category==2?"Weekly":"Monthly"),"Unique Visitors","Total Visitors"
-                };
+                    for (int i = 0; i < resultList.Count; i++)
+                    {
+                        resultList[i][1] = Convert.ToInt32(resultList[i][1]);
+                        resultList[i][2] = Convert.ToInt32(resultList[i][2]);
+                    }
+
+
+                    List<object> oIList1 = new List<object>() // new
+                    {
+                        (Category==1?"Daily":Category==2?"Weekly":"Monthly"),"Unique Visitors","Total Visitors"
+                    };
                     resultList.Insert(0, oIList1);
-                    return new DALResult<IList<IList<string>>>(Status.Found, resultList, null, null);
+                    return new DALResult<List<List<object>>>(Status.Found, resultList, null, null);
                 }
             }
             catch (Exception ex)

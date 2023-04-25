@@ -1,5 +1,6 @@
 ﻿using AddantSDAL.DTO;
 using AddantService;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -51,20 +52,25 @@ namespace AddantSDAL.DAL
         /// <param name="candidateDTO"></param>
         public static void SendEnquiryEmail(EmailField emailField)
         {
-            
-            string resumePath = HttpContext.Current.Server.MapPath("~/Uploads/Resume");
-
-            var message = new MailMessage();
-            message.To.Add(new MailAddress(emailField.UserName + " <" + (string.IsNullOrWhiteSpace(emailField?.ToMail)? ConfigurationManager.AppSettings["PrMailAddress"] : emailField?.ToMail) + ">")); //Replace with HR mail addacomntenquiry@gmail.com 
-            message.From = new MailAddress("Addant Systems" + "<" + ConfigurationManager.AppSettings["PrMailAddress"] + ">");
-            message.Subject =emailField?.Subject;
-            message.Body = CreateEmailBodyFromTemplate(emailField);
-            message.IsBodyHtml = true;
-            using (var smtp = new SmtpClient())
+            //string resumePath = HttpContext.Current.Server.MapPath("~/Uploads/Resume");
+            try
             {
-                smtp.EnableSsl = true;
-                smtp.Send(message);
+                var message = new MailMessage();
+                message.To.Add(new MailAddress(emailField.UserName + " <" + (string.IsNullOrWhiteSpace(emailField?.ToMail) ? ConfigurationManager.AppSettings["PrMailAddress"] : emailField?.ToMail) + ">")); //Replace with HR mail addacomntenquiry@gmail.com 
+                message.From = new MailAddress("Addant Systems" + "<" + ConfigurationManager.AppSettings["PrMailAddress"] + ">");
+                message.Subject = emailField?.Subject;
+                message.Body = CreateEmailBodyFromTemplate(emailField);
+                message.IsBodyHtml = true;
+                using (var smtp = new SmtpClient())
+                {
+                    smtp.EnableSsl = true;
+                    smtp.Send(message);
+                }
             }
+            catch (Exception ex)
+            {
+                Logger.WriteLog($"SendEnquiryEmail exception {JsonConvert.SerializeObject(ex)}");
+            }          
         }
         public static void SendBlogEmail(EmailField emailField)
         {
