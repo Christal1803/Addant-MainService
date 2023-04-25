@@ -130,7 +130,6 @@ namespace AddantService.Controllers
             catch (Exception ex) { Logger.WriteLog(ex.Message.ToString()); return null; }
         }
 
-       [System.Web.Http.Authorize]
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("Visitors")]
         public IHttpActionResult GetVisitors(int Category = 1)

@@ -1,5 +1,6 @@
 ﻿using AddantSDAL.DAL;
 using AddantSDAL.DTO;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -46,57 +47,72 @@ namespace AddantService.Controllers
                 var res = _enquiryRepository.CreateEnquiry(_data);
                 if (res != null)
                 {
-                    var emailField = new Email.EmailField {
-                        UserName = _data.FirstName + " " + _data.LastName,
-                        Mail = res.Object.Email
-                    };
-
-                    emailField.Subject = "Thanks for reaching us!";
-                    emailField.TemplatePath = "/AcknowledgeEnquiry.html";
-                    emailField.ToMail = _data.Email;
-                    // get template
-                    var emailTemplateDTO = _emailTemplateRepository.GetAllEmailTemplateById(0, "AcknowledgeEnquiry")?.Object;
-                    Logger.WriteLog($"Before entering to Send Email. Getting all acknowledge email template by ID value -{emailTemplateDTO}");
-                    if (emailTemplateDTO != null)
+                    Logger.WriteLog($"CreateEnquiry Case1  Creation response - : {JsonConvert.SerializeObject(res)}");
+                    if (enquiryModel.IdEnquiry == 0)
                     {
-                        Logger.WriteLog($"Template not null. Getting all email template by ID value -{emailTemplateDTO}");
-                        emailField.Body = emailTemplateDTO?.Body;
-                        if (!string.IsNullOrEmpty(emailTemplateDTO?.HeaderImageUrl))
+                        Logger.WriteLog($"CreateEnquiry Case1.1");
+                       var emailField = new Email.EmailField
                         {
-                            Match url = Regex.Match(emailTemplateDTO?.HeaderImageUrl, @"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?");
-                            if (url.Length == 0)
-                                emailField.HeaderImageUrl = Path.Combine((Path.Combine(ConfigurationManager.AppSettings["HostedDomainName"].ToString() + "/Uploads/EmailHeader", "")), emailTemplateDTO?.HeaderImageUrl != null ? emailTemplateDTO?.HeaderImageUrl : "");
-                        }
-                        if(emailTemplateDTO!=null)
-                        Email.SendEnquiryEmail(emailField);
-                    }
+                            UserName = _data.FirstName + " " + _data.LastName,
+                            Mail = res.Object.Email
+                        };
 
-
-                    emailField.Subject = "Hey there is a new inquiry!";
-                    emailField.TemplatePath = "/NotificationBusinessEnquiries.html";
-                    var templateCandidate = _emailTemplateRepository.GetAllEmailTemplateById(0, "NotificationBusinessEnquiries")?.Object;
-                    Logger.WriteLog($"Before entering to Send Email. Getting all email template by ID value -{templateCandidate}");
-                    if (templateCandidate != null)
-                    {
-                        Logger.WriteLog($"Template not null. Getting all email template by ID value -{templateCandidate}");
-                        emailField.Body = templateCandidate?.Body;
-                        if (!string.IsNullOrEmpty(templateCandidate?.HeaderImageUrl))
-                        {
-                            Match url = Regex.Match(templateCandidate?.HeaderImageUrl, @"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?");
-                            if (url.Length == 0)
-                                emailField.HeaderImageUrl = Path.Combine((Path.Combine(ConfigurationManager.AppSettings["HostedDomainName"].ToString() + "/Uploads/EmailHeader", "")), templateCandidate?.HeaderImageUrl != null ? templateCandidate?.HeaderImageUrl : "");
-                        }
-                        emailField.ToMail = ConfigurationManager.AppSettings["NotificationToAddantEmail"];
-                        emailField.Mail = _data.Email;
-                        emailField.Link = ConfigurationManager.AppSettings["AdminPortalUrl"];
+                        emailField.Subject = "Thanks for reaching us!";
+                        emailField.TemplatePath = "/AcknowledgeEnquiry.html";
+                        emailField.ToMail = _data.Email;
+                        // get template
+                        var emailTemplateDTO = _emailTemplateRepository.GetAllEmailTemplateById(0, "AcknowledgeEnquiry")?.Object;
+                        Logger.WriteLog($"Before entering to Send Email. Getting all acknowledge email template by ID value -{emailTemplateDTO}");
                         if (emailTemplateDTO != null)
-                            Email.SendEnquiryEmail(emailField);
+                        {
+                            Logger.WriteLog($"Template not null. Getting all email template by ID value -{emailTemplateDTO}");
+                            emailField.Body = emailTemplateDTO?.Body;
+                            if (!string.IsNullOrEmpty(emailTemplateDTO?.HeaderImageUrl))
+                            {
+                                Match url = Regex.Match(emailTemplateDTO?.HeaderImageUrl, @"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?");
+                                if (url.Length == 0)
+                                    emailField.HeaderImageUrl = Path.Combine((Path.Combine(ConfigurationManager.AppSettings["HostedDomainName"].ToString() + "/Uploads/EmailHeader", "")), emailTemplateDTO?.HeaderImageUrl != null ? emailTemplateDTO?.HeaderImageUrl : "");
+                            }
+                            if (emailTemplateDTO != null)
+                                Email.SendEnquiryEmail(emailField);
+                        }
+
+
+                        emailField.Subject = "Hey there is a new inquiry!";
+                        emailField.TemplatePath = "/NotificationBusinessEnquiries.html";
+                        var templateCandidate = _emailTemplateRepository.GetAllEmailTemplateById(0, "NotificationBusinessEnquiries")?.Object;
+                        Logger.WriteLog($"Before entering to Send Email. Getting all email template by ID value -{templateCandidate}");
+                        if (templateCandidate != null)
+                        {
+                            Logger.WriteLog($"Template not null. Getting all email template by ID value -{templateCandidate}");
+                            emailField.Body = templateCandidate?.Body;
+                            if (!string.IsNullOrEmpty(templateCandidate?.HeaderImageUrl))
+                            {
+                                Match url = Regex.Match(templateCandidate?.HeaderImageUrl, @"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?");
+                                if (url.Length == 0)
+                                    emailField.HeaderImageUrl = Path.Combine((Path.Combine(ConfigurationManager.AppSettings["HostedDomainName"].ToString() + "/Uploads/EmailHeader", "")), templateCandidate?.HeaderImageUrl != null ? templateCandidate?.HeaderImageUrl : "");
+                            }
+                            emailField.ToMail = ConfigurationManager.AppSettings["NotificationToAddantEmail"];
+                            emailField.Mail = _data.Email;
+                            emailField.Link = ConfigurationManager.AppSettings["AdminPortalUrl"];
+                            if (emailTemplateDTO != null)
+                                Email.SendEnquiryEmail(emailField);
+                        }
                     }
+                    else
+                        Logger.WriteLog($"CreateEnquiry Case1.2");
                 }
+                else
+                    Logger.WriteLog($"CreateEnquiry Case1  Creation response null");
 
                 return WebResult(res); 
             }
-            catch (Exception ex) { Logger.WriteLog(ex.Message.ToString()); return null; }
+            catch (Exception ex) 
+            {
+                Logger.WriteLog(ex.Message.ToString());
+                Logger.WriteLog($"CreateEnquiry exception {JsonConvert.SerializeObject(ex)}");
+                return null;
+            }
         }
 
        //[Authorize]
