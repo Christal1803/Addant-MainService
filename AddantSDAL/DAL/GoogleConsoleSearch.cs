@@ -76,7 +76,7 @@ namespace AddantSDAL.DAL
                 {
                     HttpClientInitializer = credential,
                     ApplicationName = "AddantWebsite", // application name goes here
-                                                       // ApiKey = "AIzaSyAOBksXmmnNuQNW9K_5Gy7LyRU1NSgTpnE", //commented on tuesday
+                    ApiKey = "AIzaSyAOBksXmmnNuQNW9K_5Gy7LyRU1NSgTpnE", //commented on tuesday
                 }))
                 {
                     ///newVisits
@@ -424,11 +424,11 @@ namespace AddantSDAL.DAL
                     }
 
 
-                    List<object> oIList1 = new List<object>() // new
-                    {
-                        (Category==1?"Daily":Category==2?"Weekly":"Monthly"),"Unique Visitors","Total Visitors"
-                    };
-                    resultList.Insert(0, oIList1);
+                    //List<object> oIList1 = new List<object>() // new
+                    //{
+                    //    (Category==1?"Daily":Category==2?"Weekly":"Monthly"),"Unique Visitors","Total Visitors"
+                    //};
+                    //resultList.Insert(0, oIList1);
                     return new DALResult<List<List<object>>>(Status.Found, resultList, null, null);
                 }
             }
