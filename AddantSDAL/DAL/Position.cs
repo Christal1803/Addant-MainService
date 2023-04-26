@@ -35,7 +35,7 @@ namespace AddantSDAL.DAL
         public string JobOverview { get; set; }
         public string KeyResponsibility { get; set; }
         public string Qualification { get; set; }
-        public bool? Deleted { get; set; }
+        public Nullable<bool> Deleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PositionDetail> PositionDetails { get; set; }

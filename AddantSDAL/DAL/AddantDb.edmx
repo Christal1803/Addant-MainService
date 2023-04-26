@@ -132,6 +132,7 @@
           <Property Name="IsActive" Type="bit" />
           <Property Name="BannerImgUrl" Type="varchar" MaxLength="250" />
           <Property Name="IdMainCategory" Type="int" />
+          <Property Name="Deleted" Type="bit" />
         </EntityType>
         <EntityType Name="OTPHistory">
           <Key>
@@ -461,7 +462,6 @@
           </AssociationSet>
           <EntitySet Name="AddantLifeDetails" EntityType="AddantModel.AddantLifeDetail" />
           <EntitySet Name="UserRoles" EntityType="AddantModel.UserRole" />
-          <EntitySet Name="EventCategories" EntityType="AddantModel.EventCategory" />
           <EntitySet Name="Enquiries" EntityType="AddantModel.Enquiry" />
           <EntitySet Name="EnquiryCategories" EntityType="AddantModel.EnquiryCategory" />
           <AssociationSet Name="FK__Enquiry__Categor__1881A0DE" Association="AddantModel.FK__Enquiry__Categor__1881A0DE">
@@ -478,10 +478,6 @@
           <AssociationSet Name="FK__AddantLif__IdAdd__75A278F5" Association="AddantModel.FK__AddantLif__IdAdd__75A278F5">
             <End Role="AddantLife" EntitySet="AddantLives" />
             <End Role="AddantLifeDetail" EntitySet="AddantLifeDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK__AddantLif__IdEve__74AE54BC" Association="AddantModel.FK__AddantLif__IdEve__74AE54BC">
-            <End Role="EventCategory" EntitySet="EventCategories" />
-            <End Role="AddantLife" EntitySet="AddantLives" />
           </AssociationSet>
           <EntitySet Name="Blogs" EntityType="AddantModel.Blog" />
           <EntitySet Name="Candidates" EntityType="AddantModel.Candidate" />
@@ -502,6 +498,11 @@
           <AssociationSet Name="FK__UserPrivi__IdUse__7D439ABD" Association="AddantModel.FK__UserPrivi__IdUse__7D439ABD">
             <End Role="UserRole" EntitySet="UserRoles" />
             <End Role="UserPrivilege" EntitySet="UserPrivileges" />
+          </AssociationSet>
+          <EntitySet Name="EventCategories" EntityType="AddantModel.EventCategory" />
+          <AssociationSet Name="FK__AddantLif__IdEve__74AE54BC" Association="AddantModel.FK__AddantLif__IdEve__74AE54BC">
+            <End Role="EventCategory" EntitySet="EventCategories" />
+            <End Role="AddantLife" EntitySet="AddantLives" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="EmbedCode">
@@ -621,18 +622,6 @@
           <NavigationProperty Name="Users" Relationship="AddantModel.FK__User__IdUserRole__7B5B524B" FromRole="UserRole" ToRole="User" />
           <NavigationProperty Name="UserPrivileges" Relationship="AddantModel.FK__UserPrivi__IdUse__7D439ABD" FromRole="UserRole" ToRole="UserPrivilege" />
         </EntityType>
-        <EntityType Name="EventCategory">
-          <Key>
-            <PropertyRef Name="IdEventCategory" />
-          </Key>
-          <Property Name="IdEventCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Name="IsActive" Type="Boolean" />
-          <Property Name="BannerImgUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="IdMainCategory" Type="Int32" />
-          <NavigationProperty Name="AddantLives" Relationship="AddantModel.FK__AddantLif__IdEve__74AE54BC" FromRole="EventCategory" ToRole="AddantLife" />
-        </EntityType>
         <EntityType Name="Enquiry">
           <Key>
             <PropertyRef Name="IdEnquiry" />
@@ -743,18 +732,6 @@
             </Principal>
             <Dependent Role="AddantLifeDetail">
               <PropertyRef Name="IdAddantLife" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__AddantLif__IdEve__74AE54BC">
-          <End Type="AddantModel.EventCategory" Role="EventCategory" Multiplicity="0..1" />
-          <End Type="AddantModel.AddantLife" Role="AddantLife" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="EventCategory">
-              <PropertyRef Name="IdEventCategory" />
-            </Principal>
-            <Dependent Role="AddantLife">
-              <PropertyRef Name="IdEventCategory" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -883,6 +860,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="EventCategory">
+          <Key>
+            <PropertyRef Name="IdEventCategory" />
+          </Key>
+          <Property Name="IdEventCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="BannerImgUrl" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IdMainCategory" Type="Int32" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="AddantLives" Relationship="AddantModel.FK__AddantLif__IdEve__74AE54BC" FromRole="EventCategory" ToRole="AddantLife" />
+        </EntityType>
+        <Association Name="FK__AddantLif__IdEve__74AE54BC">
+          <End Type="AddantModel.EventCategory" Role="EventCategory" Multiplicity="0..1" />
+          <End Type="AddantModel.AddantLife" Role="AddantLife" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventCategory">
+              <PropertyRef Name="IdEventCategory" />
+            </Principal>
+            <Dependent Role="AddantLife">
+              <PropertyRef Name="IdEventCategory" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -977,18 +979,6 @@
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="IdUserRole" ColumnName="IdUserRole" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="EventCategories">
-            <EntityTypeMapping TypeName="AddantModel.EventCategory">
-              <MappingFragment StoreEntitySet="EventCategory">
-                <ScalarProperty Name="IdMainCategory" ColumnName="IdMainCategory" />
-                <ScalarProperty Name="BannerImgUrl" ColumnName="BannerImgUrl" />
-                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="IdEventCategory" ColumnName="IdEventCategory" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1142,6 +1132,19 @@
                 <ScalarProperty Name="Edit" ColumnName="Edit" />
                 <ScalarProperty Name="CreatePage" ColumnName="CreatePage" />
                 <ScalarProperty Name="IdUserPrivilege" ColumnName="IdUserPrivilege" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventCategories">
+            <EntityTypeMapping TypeName="AddantModel.EventCategory">
+              <MappingFragment StoreEntitySet="EventCategory">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="IdMainCategory" ColumnName="IdMainCategory" />
+                <ScalarProperty Name="BannerImgUrl" ColumnName="BannerImgUrl" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdEventCategory" ColumnName="IdEventCategory" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
