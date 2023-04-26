@@ -217,12 +217,12 @@ namespace AddantSDAL.DAL
                              ids: "ga:282189311",// ID GOES after ga prefrix
                              startDate: startDate,
                              endDate: endDate,
-                            metrics: "ga:users"
+                            metrics: "ga:sessions"
                              );
                             apiRequest.MaxResults = 10;
                             apiRequest.Dimensions = "ga:pagePath,ga:pageTitle";
                             apiRequest.IncludeEmptyRows = false;
-                            apiRequest.Sort = "-ga:users";
+                            apiRequest.Sort = "-ga:sessions";
                             var data = apiRequest.Execute();
                             dataT.NewRow();
                             dataT.Rows[t][1] = data.Rows[0][2];
@@ -243,12 +243,12 @@ namespace AddantSDAL.DAL
                              ids: "ga:282189311",// ID GOES after ga prefrix
                              startDate: startDate,
                              endDate: endDate,
-                            metrics: "ga:sessions"
+                            metrics: "ga:newUsers"
                              );
                             apiRequest.MaxResults = 10;
                             apiRequest.Dimensions = "ga:pagePath,ga:pageTitle";
                             apiRequest.IncludeEmptyRows = false;
-                            apiRequest.Sort = "-ga:sessions";
+                            apiRequest.Sort = "-ga:newUsers";
                             var data = apiRequest.Execute();
                             dataU.NewRow();
                             dataU.Rows[t][1] = data.Rows[0][2];
@@ -288,12 +288,12 @@ namespace AddantSDAL.DAL
                              ids: "ga:282189311",// ID GOES after ga prefrix
                              startDate: startDate,
                              endDate: endDate,
-                             metrics: "ga:users"
+                             metrics: "ga:sessions"
                              );
                             apiRequest.MaxResults = 10;
                             apiRequest.Dimensions = "ga:pagePath,ga:pageTitle";
                             apiRequest.IncludeEmptyRows = false;
-                            apiRequest.Sort = "-ga:users";
+                            apiRequest.Sort = "-ga:sessions";
                             var data = apiRequest.Execute();
                             dataT.NewRow();
                             dataT.Rows[j][1] = data.Rows[0][2];
@@ -310,12 +310,12 @@ namespace AddantSDAL.DAL
                              ids: "ga:282189311",// ID GOES after ga prefrix
                              startDate: startDate,
                              endDate: endDate,
-                             metrics: "ga:sessions"
+                             metrics: "ga:newUsers"
                              );
                             apiRequest.MaxResults = 10;
                             apiRequest.Dimensions = "ga:pagePath,ga:pageTitle";
                             apiRequest.IncludeEmptyRows = false;
-                            apiRequest.Sort = "-ga:sessions";
+                            apiRequest.Sort = "-ga:newUsers";
                             var data = apiRequest.Execute();
                             dataU.NewRow();
                             dataU.Rows[j][1] = data.Rows[0][2];
@@ -355,12 +355,12 @@ namespace AddantSDAL.DAL
                              ids: "ga:282189311",// ID GOES after ga prefrix
                              startDate: startDate,
                              endDate: endDate,
-                             metrics: "ga:users"
+                             metrics: "ga:sessions"
                              );
                             apiRequest.MaxResults = 10;
                             apiRequest.Dimensions = "ga:pagePath,ga:pageTitle";
                             apiRequest.IncludeEmptyRows = false;
-                            apiRequest.Sort = "-ga:users";
+                            apiRequest.Sort = "-ga:sessions";
                             var data = apiRequest.Execute();
                             dataT.NewRow();
                             dataT.Rows[t][1] = data.Rows[0][2];
@@ -379,12 +379,12 @@ namespace AddantSDAL.DAL
                              ids: "ga:282189311",// ID GOES after ga prefrix
                              startDate: startDate,
                              endDate: endDate,
-                             metrics: "ga:users"
+                             metrics: "ga:newUsers"
                              );
                             apiRequest.MaxResults = 10;
                             apiRequest.Dimensions = "ga:pagePath,ga:pageTitle";
                             apiRequest.IncludeEmptyRows = false;
-                            apiRequest.Sort = "-ga:users";
+                            apiRequest.Sort = "-ga:newUsers";
                             var data = apiRequest.Execute();
                             dataU.NewRow();
                             dataU.Rows[t][1] = data.Rows[0][2];
