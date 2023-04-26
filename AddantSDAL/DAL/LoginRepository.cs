@@ -26,13 +26,14 @@ namespace AddantSDal.DAL
                 {
                     if (user.Password != null)
                     {
-                        LoginDTO _data = context.Users.Where(x => x.Username.Replace(" ", "").ToLower() == user.UserName.Replace("", "").ToLower() && x.Password == user.Password && x.IsActive == true).Select(
+                        LoginDTO _data = context.Users.Where(x => x.Username.Replace(" ", "").ToLower() == user.UserName.Replace("", "").ToLower() && x.Password == user.Password && x.IsActive == true&&x.Deleted!=true).Select(
                             x => new LoginDTO
                             {
                                 UserName = x.Username,
                                 Password = x.Password,
                                 UserId = x.UserId,
                                 IsActive = x.IsActive,
+                                Deleted=x.Deleted
 
                             }).FirstOrDefault();
                         if (_data != null && IsPasswordCaseSentive(user.Password, _data.UserId)&& IsUserNameCaseSentive(user.UserName, _data.UserId))
@@ -42,13 +43,15 @@ namespace AddantSDal.DAL
                     }
                     else
                     {
-                        LoginDTO _data = context.Users.Where(x => x.Email.Replace(" ", "").ToLower().Trim() == user.UserName.Replace("", "").ToLower().Trim() && x.IsActive == true).Select(
+                        LoginDTO _data = context.Users.Where(x => x.Email.Replace(" ", "").ToLower().Trim() == user.UserName.Replace("", "").ToLower().Trim() && x.IsActive == true && x.Deleted != true).Select(
                                 x => new LoginDTO
                                 {
                                     UserName = x.Username,
                                     Password = x.Password,
                                     UserId = x.UserId,
                                     IsActive = x.IsActive,
+                                    Deleted = x.Deleted
+
 
                                 }).FirstOrDefault();
                         //if (_data != null && IsPasswordCaseSentive(user.Password))

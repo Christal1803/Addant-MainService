@@ -19,6 +19,7 @@ namespace AddantService.Models
         public string Password { get; set; }
 
         public bool? IsActive { get; set; }
+        public bool? Deleted { get; set; }
         public string Token { get; set; }
     }
     public class DashBoardBlockDataModel
