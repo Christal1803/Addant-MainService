@@ -26,6 +26,7 @@ namespace AddantSDAL.DAL
         public Nullable<bool> IsActive { get; set; }
         public string BannerImgUrl { get; set; }
         public Nullable<int> IdMainCategory { get; set; }
+        public Nullable<bool> Deleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AddantLife> AddantLives { get; set; }

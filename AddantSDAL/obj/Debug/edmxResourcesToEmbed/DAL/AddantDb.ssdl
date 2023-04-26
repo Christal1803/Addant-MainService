@@ -127,6 +127,7 @@
     <Property Name="IsActive" Type="bit" />
     <Property Name="BannerImgUrl" Type="varchar" MaxLength="250" />
     <Property Name="IdMainCategory" Type="int" />
+    <Property Name="Deleted" Type="bit" />
   </EntityType>
   <EntityType Name="OTPHistory">
     <Key>

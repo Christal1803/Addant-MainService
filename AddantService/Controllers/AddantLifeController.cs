@@ -535,5 +535,19 @@ namespace AddantService.Controllers
             catch (Exception ex) { Logger.WriteLog(ex.Message.ToString()); return null; }
         }
 
+        [AllowAnonymous]
+        [Route("DeletedEventCategory/{IdEventCategory}")]
+        [HttpPost]
+        public IHttpActionResult EventCategoryDeletedStatus(int IdEventCategory, bool isDeleted)
+        {
+            try
+            {
+                var res = _addantLifeRepository.EventCategoryUpdateDeletedStatus(IdEventCategory, isDeleted);
+                return WebResult(res);
+            }
+            catch (Exception ex) { Logger.WriteLog(ex.Message.ToString()); return null; }
+        }
+
+
     }
 }

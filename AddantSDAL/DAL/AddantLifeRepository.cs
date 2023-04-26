@@ -326,5 +326,22 @@ namespace AddantSDAL.DAL
             }
             catch (Exception ex) { return new DALResult<bool>(Status.Exception, false, null, null); }
         }
+
+
+        public DALResult<bool> EventCategoryUpdateDeletedStatus(int IdEventCategory, bool isDeleted)
+        {
+            try
+            {
+                using (var gt = new AddantEntities1())
+                {
+                    EventCategory res = gt.EventCategories.Where(x => x.IdEventCategory == IdEventCategory).FirstOrDefault();
+                    res.Deleted = true;
+                    gt.Entry(res).CurrentValues.SetValues(res);
+                    gt.SaveChanges();
+                    return new DALResult<bool>(Status.Deleted, true, null, null);
+                }
+            }
+            catch (Exception ex) { return new DALResult<bool>(Status.Exception, false, null, null); }
+        }
     }
 }

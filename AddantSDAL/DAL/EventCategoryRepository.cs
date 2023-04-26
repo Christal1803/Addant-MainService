@@ -23,7 +23,9 @@ namespace AddantSDAL.DAL
                          Name = eventCategoryData.Name,
                          Description = eventCategoryData.Description,
                         IsActive = eventCategoryData.IsActive,
-                         IdMainCategory = eventCategoryData.IdMainCategory
+                         IdMainCategory = eventCategoryData.IdMainCategory,
+                         Deleted=false
+
                     };
                     var existingEnquiry = gt.EventCategories.Where(x => x.IdEventCategory == eventCategoryData.IdEventCategory).FirstOrDefault();
                     if (existingEnquiry != null)
@@ -75,12 +77,16 @@ namespace AddantSDAL.DAL
                             Description = s.Description,
                             IsActive = (bool)s.IsActive,
                             BannerImgUrl = s.BannerImgUrl,
-                            IdMainCategory = s.IdMainCategory
+                            IdMainCategory = s.IdMainCategory,
+                          Deleted = s.Deleted
+
                         }).ToList();
                   
                         result = isMaincategory? result.Where(x=>x.IdMainCategory == null).ToList() : result.Where(x => x.IdMainCategory != null).ToList();
-                  if (!isAdminCall)
-                        result = result.Where(x => x.IsActive == true).ToList();
+                    result = result.Where(x => x.Deleted != true).ToList();
+
+                    if (!isAdminCall)
+                        result = result.Where(x => x.IsActive == true&& x.Deleted != true).ToList();
                 }
                 return new DALResult<List<EventCategoryDTO>>(Status.Found, result, null, null);
             }
@@ -94,16 +100,20 @@ namespace AddantSDAL.DAL
                 var result = new EventCategoryDTO();
                 using (var gt = new AddantEntities1())
                 {
-                    result = gt.EventCategories.Where(x => x.IdEventCategory == IdEventCategory).Select(s => new EventCategoryDTO
+                    result = gt.EventCategories.Where(x => x.IdEventCategory == IdEventCategory&& x.Deleted != true).Select(s => new EventCategoryDTO
                     {
                         IdEventCategory = s.IdEventCategory,
                         Name = s.Name,
                         Description = s.Description,
                         IsActive = (bool)s.IsActive,
                          BannerImgUrl = s.BannerImgUrl,
-                          IdMainCategory = s.IdMainCategory
+                          IdMainCategory = s.IdMainCategory,
+                          Deleted=s.Deleted
+
                     }).OrderByDescending(c => c.IdEventCategory).FirstOrDefault();
+
                 }
+
                 return new DALResult<EventCategoryDTO>(Status.Found, result, null, null);
             }
             catch (Exception ex) { return new DALResult<EventCategoryDTO>(Status.Exception, null, ex.Message.ToString(), null); }
@@ -115,7 +125,7 @@ namespace AddantSDAL.DAL
                 var result = new EventCategoryDTO();
                 using (var gt = new AddantEntities1())
                 {
-                    result = gt.EventCategories.Where(x => x.IdMainCategory == IdMainCategory).Select(s => new EventCategoryDTO
+                    result = gt.EventCategories.Where(x => x.IdMainCategory == IdMainCategory&& x.Deleted != true).Select(s => new EventCategoryDTO
                     {
                         IdEventCategory = s.IdEventCategory,
                         Name = s.Name,
@@ -137,7 +147,7 @@ namespace AddantSDAL.DAL
 				var result = new List<EventCategoryDTO>();
 				using (var gt = new AddantEntities1())
 				{
-					result = gt.EventCategories.Where(x => x.IdMainCategory == IdMainCategory).Select(s => new EventCategoryDTO
+					result = gt.EventCategories.Where(x => x.IdMainCategory == IdMainCategory&& x.Deleted != true).Select(s => new EventCategoryDTO
 					{
 						IdEventCategory = s.IdEventCategory,
 						Name = s.Name,

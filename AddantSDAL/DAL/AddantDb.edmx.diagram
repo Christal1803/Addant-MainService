@@ -16,7 +16,6 @@
         <AssociationConnector Association="AddantModel.FK__TemplateT__IdPag__3FD07829" />
         <EntityTypeShape EntityType="AddantModel.AddantLifeDetail" Width="1.5" PointX="5.625" PointY="9.5" />
         <EntityTypeShape EntityType="AddantModel.UserRole" Width="1.5" PointX="7.25" PointY="7.125" />
-        <EntityTypeShape EntityType="AddantModel.EventCategory" Width="1.5" PointX="1.125" PointY="13.5" />
         <EntityTypeShape EntityType="AddantModel.Enquiry" Width="1.5" PointX="5.25" PointY="1.875" />
         <EntityTypeShape EntityType="AddantModel.EnquiryCategory" Width="1.5" PointX="3" PointY="16.625" />
         <AssociationConnector Association="AddantModel.FK__Enquiry__Categor__1881A0DE" />
@@ -25,7 +24,6 @@
         <EntityTypeShape EntityType="AddantModel.OTPHistory" Width="1.5" PointX="9.375" PointY="8.75" />
         <EntityTypeShape EntityType="AddantModel.AddantLife" Width="1.5" PointX="3.375" PointY="11.875" />
         <AssociationConnector Association="AddantModel.FK__AddantLif__IdAdd__75A278F5" />
-        <AssociationConnector Association="AddantModel.FK__AddantLif__IdEve__74AE54BC" />
         <EntityTypeShape EntityType="AddantModel.Blog" Width="1.5" PointX="0.75" PointY="8.75" />
         <EntityTypeShape EntityType="AddantModel.Candidate" Width="1.5" PointX="3" PointY="0.75" />
         <AssociationConnector Association="AddantModel.FK__Candidate__IdPos__76969D2E" />
@@ -34,6 +32,8 @@
         <AssociationConnector Association="AddantModel.FK__UserPrivi__IdPag__7C4F7684" />
         <AssociationConnector Association="AddantModel.FK__User__IdUserRole__7B5B524B" />
         <AssociationConnector Association="AddantModel.FK__UserPrivi__IdUse__7D439ABD" />
+        <EntityTypeShape EntityType="AddantModel.EventCategory" Width="1.5" PointX="1.125" PointY="19.375" />
+        <AssociationConnector Association="AddantModel.FK__AddantLif__IdEve__74AE54BC" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
