@@ -211,7 +211,7 @@ namespace AddantSDAL.DAL
                             startDate = DateTime.Now.AddHours(i).ToString("yyyy-MM-dd"); endDate = DateTime.Now.AddHours(i + 6).ToString("yyyy-MM-dd");
                             dataT.Rows.Add();
 
-                            dataT.Rows[t][0] = DateTime.Now.AddHours(i).Hour + "-- " + DateTime.Now.AddHours(i + 6).Hour;//"day" + (j + 1);
+                            dataT.Rows[t][0] = DateTime.Now.AddHours(i).Hour + "-" + DateTime.Now.AddHours(i + 6).Hour;//"day" + (j + 1);
 
                             var apiRequest = service.Data.Ga.Get(
                              ids: "ga:282189311",// ID GOES after ga prefrix
@@ -237,7 +237,7 @@ namespace AddantSDAL.DAL
                             startDate = DateTime.Now.AddHours(i).ToString("yyyy-MM-dd"); endDate = DateTime.Now.AddHours(i + 6).ToString("yyyy-MM-dd");
                             dataU.Rows.Add();
 
-                            dataU.Rows[t][0] = DateTime.Now.AddHours(i).Hour + "-- " + DateTime.Now.AddHours(i + 6).Hour;//"day" + (j + 1);
+                            dataU.Rows[t][0] = DateTime.Now.AddHours(i).Hour + "-" + DateTime.Now.AddHours(i + 6).Hour;//"day" + (j + 1);
 
                             var apiRequest = service.Data.Ga.Get(
                              ids: "ga:282189311",// ID GOES after ga prefrix

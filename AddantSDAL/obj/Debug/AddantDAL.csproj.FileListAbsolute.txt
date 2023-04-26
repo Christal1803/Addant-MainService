@@ -451,3 +451,38 @@ C:\AddantNew\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.csproj.CoreCompil
 C:\AddantNew\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.csproj.CopyComplete
 C:\AddantNew\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.dll
 C:\AddantNew\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.pdb
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\AddantDAL.dll.config
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\AddantDAL.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\AddantDAL.pdb
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\EntityFramework.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Analytics.v3.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.AnalyticsReporting.v4.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Auth.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Core.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Microsoft.PowerBI.Api.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\System.Security.Cryptography.Cng.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\EntityFramework.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.pdb
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Analytics.v3.pdb
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Analytics.v3.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.AnalyticsReporting.v4.pdb
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.AnalyticsReporting.v4.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Auth.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Core.pdb
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Google.Apis.Core.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\bin\Debug\System.Security.Cryptography.Cng.xml
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.csproj.AssemblyReference.cache
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.csproj.CoreCompileInputs.cache
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.csproj.CopyComplete
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.dll
+C:\Users\ayana.vinod\Desktop\ADDANT _New\Addant-MainService\AddantSDAL\obj\Debug\AddantDAL.pdb
