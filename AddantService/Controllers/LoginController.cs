@@ -37,7 +37,8 @@ namespace AddantService.Controllers
                     UserName = loginModel.UserName,
                     Password = loginModel.Password,
                     IsActive = loginModel.IsActive,
-                    UserId = loginModel.UserId
+                    UserId = loginModel.UserId,
+                    Deleted=loginModel.Deleted
                 };
                 var res = _loginRepository.CheckLogin(obj);
                 if (res?.Object != null)

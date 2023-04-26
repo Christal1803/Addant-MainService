@@ -20,6 +20,8 @@ namespace AddantSDal.DTO
         public bool? IsActive { get; set; }
         [DataMember]
         public string Token { get; set; }
+        [DataMember]
+        public bool? Deleted { get; set; }
     }
     public class DashBoardBlockData
     { 
