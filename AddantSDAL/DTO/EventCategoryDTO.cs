@@ -22,5 +22,7 @@ namespace AddantSDAL.DTO
 		public string BannerImgUrl { get; set; }
 		[DataMember]
 		public int? IdMainCategory { get; set; }
-	}
+        [DataMember]
+        public bool? Deleted { get; set; }
+    }
 }

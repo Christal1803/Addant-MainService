@@ -18,6 +18,7 @@ namespace AddantSDAL.DAL
         DALResult<List<IGrouping<int, AddantLifeDTO>>> GetAllAddantLifeByCategory(bool isAdminCall = false, string category = "", string groupBy = "");
         DALResult<bool> UpdateDeletedStatus(int AddantLifeId, bool isDeleted);
         DALResult<bool> DetailUpdateDeletedStatus(int DetailId, bool isDeleted);
+        DALResult<bool> EventCategoryUpdateDeletedStatus(int IdEventCategory, bool isDeleted);
 
     }
 }

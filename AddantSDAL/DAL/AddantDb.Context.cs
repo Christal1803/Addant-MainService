@@ -33,7 +33,6 @@ namespace AddantSDAL.DAL
         public virtual DbSet<TemplateType> TemplateTypes { get; set; }
         public virtual DbSet<AddantLifeDetail> AddantLifeDetails { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
-        public virtual DbSet<EventCategory> EventCategories { get; set; }
         public virtual DbSet<Enquiry> Enquiries { get; set; }
         public virtual DbSet<EnquiryCategory> EnquiryCategories { get; set; }
         public virtual DbSet<Position> Positions { get; set; }
@@ -43,5 +42,6 @@ namespace AddantSDAL.DAL
         public virtual DbSet<Candidate> Candidates { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserPrivilege> UserPrivileges { get; set; }
+        public virtual DbSet<EventCategory> EventCategories { get; set; }
     }
 }

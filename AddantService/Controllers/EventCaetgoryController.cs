@@ -41,6 +41,7 @@ namespace AddantService.Controllers
 					Name = enquiryModel.Name,
 					BannerImgUrl = enquiryModel.BannerImgUrl,
 					IdMainCategory = enquiryModel.IdMainCategory,
+                    Deleted=false
                     
 				};
                 var res = _eventCategoryRepository.CreateEventCategory(_data);

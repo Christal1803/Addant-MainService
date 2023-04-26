@@ -14,6 +14,7 @@ namespace AddantService.Models
 		public string Name { get; set; }
 		public string Description { get; set; }
 		public bool IsActive { get; set; }
+        public bool Deleted { get; set; }
 		public string BannerImgUrl { get; set; }
 		public int? IdMainCategory { get; set; }
 	}
