@@ -314,7 +314,6 @@ namespace AddantSDAL.DAL
                             foreach (var position in positionData)
                             {
                                 var reqReceived = result.Where(t => t.IdPosition == position.IdPosition).ToList();
-                                reqReceived = result.Where(t => t.Deleted !=true).ToList();
                                 if (reqReceived != null && reqReceived?.Count > 0)
                                 {
                                     var shortListedCandidates = reqReceived?.Where(t => t.Deleted!=true&&t.Status == ApplicationStatus.Shortlisted.ToString()).Count() ?? 0;
