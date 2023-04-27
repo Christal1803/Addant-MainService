@@ -228,9 +228,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="EventCategories">
+      <EntityTypeMapping TypeName="AddantModel.EventCategory">
+        <MappingFragment StoreEntitySet="EventCategory">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="IdMainCategory" ColumnName="IdMainCategory" />
+          <ScalarProperty Name="BannerImgUrl" ColumnName="BannerImgUrl" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdEventCategory" ColumnName="IdEventCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="UserPrivileges">
       <EntityTypeMapping TypeName="AddantModel.UserPrivilege">
         <MappingFragment StoreEntitySet="UserPrivilege">
+          <ScalarProperty Name="DeletePage" ColumnName="DeletePage" />
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
           <ScalarProperty Name="StatusPage" ColumnName="StatusPage" />
           <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
@@ -242,19 +256,6 @@
           <ScalarProperty Name="Edit" ColumnName="Edit" />
           <ScalarProperty Name="CreatePage" ColumnName="CreatePage" />
           <ScalarProperty Name="IdUserPrivilege" ColumnName="IdUserPrivilege" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="EventCategories">
-      <EntityTypeMapping TypeName="AddantModel.EventCategory">
-        <MappingFragment StoreEntitySet="EventCategory">
-          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="IdMainCategory" ColumnName="IdMainCategory" />
-          <ScalarProperty Name="BannerImgUrl" ColumnName="BannerImgUrl" />
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="IdEventCategory" ColumnName="IdEventCategory" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -29,6 +29,8 @@ namespace AddantSDAL.DTO
 		[DataMember]
 		public DateTime? CreatedDate { get; set; }
         [DataMember]
-        public bool? Deleted { get; set; } 
+        public bool? Deleted { get; set; }
+        [DataMember]
+        public bool? DeletePage { get; set; }
     }
 }

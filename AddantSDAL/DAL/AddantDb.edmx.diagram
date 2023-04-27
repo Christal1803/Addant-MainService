@@ -28,12 +28,12 @@
         <EntityTypeShape EntityType="AddantModel.Candidate" Width="1.5" PointX="3" PointY="0.75" />
         <AssociationConnector Association="AddantModel.FK__Candidate__IdPos__76969D2E" />
         <EntityTypeShape EntityType="AddantModel.User" Width="1.5" PointX="9.5" PointY="12.125" />
-        <EntityTypeShape EntityType="AddantModel.UserPrivilege" Width="1.5" PointX="12.625" PointY="8.625" />
-        <AssociationConnector Association="AddantModel.FK__UserPrivi__IdPag__7C4F7684" />
         <AssociationConnector Association="AddantModel.FK__User__IdUserRole__7B5B524B" />
-        <AssociationConnector Association="AddantModel.FK__UserPrivi__IdUse__7D439ABD" />
         <EntityTypeShape EntityType="AddantModel.EventCategory" Width="1.5" PointX="1.125" PointY="19.375" />
         <AssociationConnector Association="AddantModel.FK__AddantLif__IdEve__74AE54BC" />
+        <EntityTypeShape EntityType="AddantModel.UserPrivilege" Width="1.5" PointX="12.625" PointY="8.5" />
+        <AssociationConnector Association="AddantModel.FK__UserPrivi__IdPag__7C4F7684" />
+        <AssociationConnector Association="AddantModel.FK__UserPrivi__IdUse__7D439ABD" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

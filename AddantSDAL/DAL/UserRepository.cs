@@ -68,23 +68,7 @@ namespace AddantSDAL.DAL
                                 Deleted = x.Deleted,
 
                             }).OrderByDescending(c => c.CreatedOn).ToList();
-                    var result = gt.Users.ToList();
-                    var RoleData = gt.UserRoles.ToList();
-                    if (RoleData != null && RoleData?.Count > 0)
-                    {
-                        foreach (var role in RoleData)
-                        {
-                            var reqReceived = result.Where(t => t.IdUserRole == role.IdUserRole).ToList();
-                            if (reqReceived != null && reqReceived?.Count > 0)
-                            {
-
-                                res.Add(new UserDTO()
-                                {
-                                    Role = role.Name
-                                });
-                            }
-                        }
-                    }
+                   
                     res = res.Where(a => (a.FirstName != null ? (a.FirstName.ToUpper().Contains(searchText != null ? searchText?.ToUpper() : "") || string.IsNullOrWhiteSpace(searchText)) : string.IsNullOrWhiteSpace(searchText))
                              || (a.LastName != null ? (a.LastName.ToUpper().Contains(searchText != null ? searchText?.ToUpper() : "") || string.IsNullOrWhiteSpace(searchText)) : string.IsNullOrWhiteSpace(searchText))
                              || (a.Mobile != null ? (a.Mobile.Contains(searchText != null ? searchText?.ToUpper() : "") || string.IsNullOrWhiteSpace(searchText)) : string.IsNullOrWhiteSpace(searchText))

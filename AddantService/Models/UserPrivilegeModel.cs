@@ -20,5 +20,6 @@ namespace AddantService.Models
 		public bool IsDeleted { get; set; }
 		public DateTime CreatedDate { get; set; }
 		public bool Deleted { get; set; }
-	}
+        public bool DeletePage { get; set; }
+    }
 }

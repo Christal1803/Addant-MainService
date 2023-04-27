@@ -83,7 +83,7 @@ namespace AddantSDAL.DAL
                         var rolePrevileges = gt.UserPrivileges.Where(t => t.IdUserRole == role.IdUserRole).ToList();
                         if (rolePrevileges != null && rolePrevileges?.Count > 0)
                         {
-                            var prev = rolePrevileges.Where(t => (t.CreatePage ?? false) && (t.DisablePage ?? false) && (t.ViewPage ?? false) && (t.Edit ?? false)&& (t.Deleted ?? false)).ToList();
+                            var prev = rolePrevileges.Where(t => (t.CreatePage ?? false) && (t.DisablePage ?? false) && (t.ViewPage ?? false) && (t.Edit ?? false)&& (t.DeletePage ?? false)).ToList();
                             if (prev != null && prev?.Count == rolePrevileges?.Count)
                                 role.IsFullAccess = true;
                             else

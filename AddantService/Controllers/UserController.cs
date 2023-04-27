@@ -62,26 +62,29 @@ namespace AddantService.Controllers
                 // For sending Email to New User
                 if (res?.Object != null)
                 {
-                    var emailField = new Email.EmailField
+                    if (userModel?.UserId == null)//not send email for update
                     {
-                        UserName = res?.Object?.Email,
-                        Title = res?.Object?.Username,
-                        Password = res?.Object.Password,
-                        Subject = "New User created successfully",
-                        TemplatePath = "/UserCreation.html",
-                        Link = "https://portal.addant.com/#/"
-                    };
-                    var templateCandidate = _emailTemplateRepository.GetAllEmailTemplateById(0, "UserCreation")?.Object;
-                    if (templateCandidate != null)
-                    {
-                        emailField.Body = templateCandidate?.Body;
-                        if (!string.IsNullOrEmpty(templateCandidate?.HeaderImageUrl))
+                        var emailField = new Email.EmailField
                         {
-                            Match url = Regex.Match(templateCandidate?.HeaderImageUrl, @"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?");
-                            if (url.Length == 0)
-                                emailField.HeaderImageUrl = Path.Combine((Path.Combine(ConfigurationManager.AppSettings["HostedDomainName"].ToString() + "/Uploads/EmailHeader", "")), templateCandidate?.HeaderImageUrl != null ? templateCandidate?.HeaderImageUrl : "");
+                            UserName = res?.Object?.Email,
+                            Title = res?.Object?.Username,
+                            Password = res?.Object.Password,
+                            Subject = "New User created successfully",
+                            TemplatePath = "/UserCreation.html",
+                            Link = "https://portal.addant.com/#/"
+                        };
+                        var templateCandidate = _emailTemplateRepository.GetAllEmailTemplateById(0, "UserCreation")?.Object;
+                        if (templateCandidate != null)
+                        {
+                            emailField.Body = templateCandidate?.Body;
+                            if (!string.IsNullOrEmpty(templateCandidate?.HeaderImageUrl))
+                            {
+                                Match url = Regex.Match(templateCandidate?.HeaderImageUrl, @"http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?");
+                                if (url.Length == 0)
+                                    emailField.HeaderImageUrl = Path.Combine((Path.Combine(ConfigurationManager.AppSettings["HostedDomainName"].ToString() + "/Uploads/EmailHeader", "")), templateCandidate?.HeaderImageUrl != null ? templateCandidate?.HeaderImageUrl : "");
+                            }
+                            Email.SendUserEmail(emailField);
                         }
-                        Email.SendUserEmail(emailField);
                     }
                 }
                 return WebResult(res);

@@ -41,8 +41,8 @@ namespace AddantService.Controllers
                         IdUserRole = item.IdUserRole,
                         IsDeleted = item.IsDeleted,
                         ViewPage = item.ViewPage,
-                        Deleted = false
-
+                        Deleted = false,
+                        DeletePage = item.DeletePage,
                     };
                     lstUserPriviledge.Add(_data);
                 }

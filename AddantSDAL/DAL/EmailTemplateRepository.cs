@@ -150,7 +150,7 @@ namespace AddantSDAL.DAL
                     }).OrderByDescending(c => c.IdEmailTemplate).FirstOrDefault();
                     if (!string.IsNullOrEmpty(templateType))
                     {
-                        result = gt.EmailTemplates.Where(x => x.TemplateType.Name == templateType && x.IsDeleted == true).Select(s => new EmailTemplateDTO
+                        result = gt.EmailTemplates.Where(x => x.TemplateType.Name == templateType && x.IsDeleted == true&&x.Deleted!=true).Select(s => new EmailTemplateDTO
                         {
                             CreatedDate = s.CreatedDate,
                             Body = s.Body,

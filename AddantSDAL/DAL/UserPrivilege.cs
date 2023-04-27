@@ -25,6 +25,7 @@ namespace AddantSDAL.DAL
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<bool> StatusPage { get; set; }
         public Nullable<bool> Deleted { get; set; }
+        public Nullable<bool> DeletePage { get; set; }
     
         public virtual Page Page { get; set; }
         public virtual UserRole UserRole { get; set; }

@@ -58,23 +58,23 @@
       <End Role="Candidate" EntitySet="Candidates" />
     </AssociationSet>
     <EntitySet Name="Users" EntityType="AddantModel.User" />
-    <EntitySet Name="UserPrivileges" EntityType="AddantModel.UserPrivilege" />
-    <AssociationSet Name="FK__UserPrivi__IdPag__7C4F7684" Association="AddantModel.FK__UserPrivi__IdPag__7C4F7684">
-      <End Role="Page" EntitySet="Pages" />
-      <End Role="UserPrivilege" EntitySet="UserPrivileges" />
-    </AssociationSet>
     <AssociationSet Name="FK__User__IdUserRole__7B5B524B" Association="AddantModel.FK__User__IdUserRole__7B5B524B">
       <End Role="UserRole" EntitySet="UserRoles" />
       <End Role="User" EntitySet="Users" />
-    </AssociationSet>
-    <AssociationSet Name="FK__UserPrivi__IdUse__7D439ABD" Association="AddantModel.FK__UserPrivi__IdUse__7D439ABD">
-      <End Role="UserRole" EntitySet="UserRoles" />
-      <End Role="UserPrivilege" EntitySet="UserPrivileges" />
     </AssociationSet>
     <EntitySet Name="EventCategories" EntityType="AddantModel.EventCategory" />
     <AssociationSet Name="FK__AddantLif__IdEve__74AE54BC" Association="AddantModel.FK__AddantLif__IdEve__74AE54BC">
       <End Role="EventCategory" EntitySet="EventCategories" />
       <End Role="AddantLife" EntitySet="AddantLives" />
+    </AssociationSet>
+    <EntitySet Name="UserPrivileges" EntityType="AddantModel.UserPrivilege" />
+    <AssociationSet Name="FK__UserPrivi__IdPag__7C4F7684" Association="AddantModel.FK__UserPrivi__IdPag__7C4F7684">
+      <End Role="Page" EntitySet="Pages" />
+      <End Role="UserPrivilege" EntitySet="UserPrivileges" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserPrivi__IdUse__7D439ABD" Association="AddantModel.FK__UserPrivi__IdUse__7D439ABD">
+      <End Role="UserRole" EntitySet="UserRoles" />
+      <End Role="UserPrivilege" EntitySet="UserPrivileges" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="EmbedCode">
@@ -378,36 +378,6 @@
     <Property Name="Deleted" Type="Boolean" />
     <NavigationProperty Name="UserRole" Relationship="AddantModel.FK__User__IdUserRole__7B5B524B" FromRole="User" ToRole="UserRole" />
   </EntityType>
-  <EntityType Name="UserPrivilege">
-    <Key>
-      <PropertyRef Name="IdUserPrivilege" />
-    </Key>
-    <Property Name="IdUserPrivilege" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CreatePage" Type="Boolean" />
-    <Property Name="Edit" Type="Boolean" />
-    <Property Name="ViewPage" Type="Boolean" />
-    <Property Name="DisablePage" Type="Boolean" />
-    <Property Name="IdPage" Type="Int32" />
-    <Property Name="IdUserRole" Type="Int32" />
-    <Property Name="IsDeleted" Type="Boolean" />
-    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
-    <Property Name="StatusPage" Type="Boolean" />
-    <Property Name="Deleted" Type="Boolean" />
-    <NavigationProperty Name="Page" Relationship="AddantModel.FK__UserPrivi__IdPag__7C4F7684" FromRole="UserPrivilege" ToRole="Page" />
-    <NavigationProperty Name="UserRole" Relationship="AddantModel.FK__UserPrivi__IdUse__7D439ABD" FromRole="UserPrivilege" ToRole="UserRole" />
-  </EntityType>
-  <Association Name="FK__UserPrivi__IdPag__7C4F7684">
-    <End Type="AddantModel.Page" Role="Page" Multiplicity="0..1" />
-    <End Type="AddantModel.UserPrivilege" Role="UserPrivilege" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Page">
-        <PropertyRef Name="IdPage" />
-      </Principal>
-      <Dependent Role="UserPrivilege">
-        <PropertyRef Name="IdPage" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__User__IdUserRole__7B5B524B">
     <End Type="AddantModel.UserRole" Role="UserRole" Multiplicity="0..1" />
     <End Type="AddantModel.User" Role="User" Multiplicity="*" />
@@ -416,18 +386,6 @@
         <PropertyRef Name="IdUserRole" />
       </Principal>
       <Dependent Role="User">
-        <PropertyRef Name="IdUserRole" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__UserPrivi__IdUse__7D439ABD">
-    <End Type="AddantModel.UserRole" Role="UserRole" Multiplicity="0..1" />
-    <End Type="AddantModel.UserPrivilege" Role="UserPrivilege" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UserRole">
-        <PropertyRef Name="IdUserRole" />
-      </Principal>
-      <Dependent Role="UserPrivilege">
         <PropertyRef Name="IdUserRole" />
       </Dependent>
     </ReferentialConstraint>
@@ -454,6 +412,49 @@
       </Principal>
       <Dependent Role="AddantLife">
         <PropertyRef Name="IdEventCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UserPrivilege">
+    <Key>
+      <PropertyRef Name="IdUserPrivilege" />
+    </Key>
+    <Property Name="IdUserPrivilege" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatePage" Type="Boolean" />
+    <Property Name="Edit" Type="Boolean" />
+    <Property Name="ViewPage" Type="Boolean" />
+    <Property Name="DisablePage" Type="Boolean" />
+    <Property Name="IdPage" Type="Int32" />
+    <Property Name="IdUserRole" Type="Int32" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="StatusPage" Type="Boolean" />
+    <Property Name="Deleted" Type="Boolean" />
+    <Property Name="DeletePage" Type="Boolean" />
+    <NavigationProperty Name="Page" Relationship="AddantModel.FK__UserPrivi__IdPag__7C4F7684" FromRole="UserPrivilege" ToRole="Page" />
+    <NavigationProperty Name="UserRole" Relationship="AddantModel.FK__UserPrivi__IdUse__7D439ABD" FromRole="UserPrivilege" ToRole="UserRole" />
+  </EntityType>
+  <Association Name="FK__UserPrivi__IdPag__7C4F7684">
+    <End Type="AddantModel.Page" Role="Page" Multiplicity="0..1" />
+    <End Type="AddantModel.UserPrivilege" Role="UserPrivilege" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Page">
+        <PropertyRef Name="IdPage" />
+      </Principal>
+      <Dependent Role="UserPrivilege">
+        <PropertyRef Name="IdPage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserPrivi__IdUse__7D439ABD">
+    <End Type="AddantModel.UserRole" Role="UserRole" Multiplicity="0..1" />
+    <End Type="AddantModel.UserPrivilege" Role="UserPrivilege" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserRole">
+        <PropertyRef Name="IdUserRole" />
+      </Principal>
+      <Dependent Role="UserPrivilege">
+        <PropertyRef Name="IdUserRole" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

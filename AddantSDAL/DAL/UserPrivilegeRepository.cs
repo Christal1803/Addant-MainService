@@ -31,7 +31,8 @@ namespace AddantSDAL.DAL
                             CreatePage = s.up.CreatePage,
                             IdPage = s.up.IdPage,
                             IdUserPrivilege = s.up.IdUserPrivilege,
-                            Deleted=s.up.Deleted
+                            Deleted=s.up.Deleted,
+                            DeletePage = s.up.DeletePage,
                         }).ToList();
                 }
                 return new DALResult<List<UserPrivilegeDTO>>(Status.Found, userPrivilege, null, null);
@@ -61,7 +62,8 @@ namespace AddantSDAL.DAL
                             IdUserRole = item.IdUserRole,
                             IsDeleted = (bool)item.IsDeleted,
                             ViewPage = item.ViewPage,
-                            Deleted = false
+                            Deleted = false,
+                            DeletePage = item.DeletePage,
                         };
                         var existingUserPrivilege = gt.UserPrivileges.Where(x => x.IdUserPrivilege == item.IdUserPrivilege).FirstOrDefault();
                         if (existingUserPrivilege != null)
@@ -86,7 +88,8 @@ namespace AddantSDAL.DAL
                             IdUserRole = item.IdUserRole,
                             IsDeleted = (bool)item.IsDeleted,
                             ViewPage = item.ViewPage,
-                            Deleted = false
+                            Deleted = false,
+                            DeletePage = item.DeletePage,
                         };
                         lstPriviledge.Add(userPrivilege);
                     }
@@ -133,8 +136,9 @@ namespace AddantSDAL.DAL
                         IdUserRole = s.IdUserRole,
                         IsDeleted = s.IsDeleted,
                         ViewPage = s.ViewPage,
-                        Deleted=s.Deleted
-                        
+                        Deleted=s.Deleted,
+                        DeletePage = s.DeletePage,
+
                     }).ToList();
                     userPrivileges = userPrivileges.Where(x => x.Deleted != true).ToList();
 
@@ -163,7 +167,8 @@ namespace AddantSDAL.DAL
                         IdUserRole = s.IdUserRole,
                         IsDeleted = s.IsDeleted,
                         ViewPage = s.ViewPage,
-                        Deleted=s.Deleted
+                        Deleted=s.Deleted,
+                        DeletePage = s.DeletePage,
                     }).FirstOrDefault();
                 }
                 return new DALResult<UserPrivilegeDTO>(Status.Found, userPrivilege, null, null);
@@ -231,7 +236,8 @@ namespace AddantSDAL.DAL
                         IdUserRole = s.IdUserRole,
                         IsDeleted = s.IsDeleted,
                         ViewPage = s.ViewPage,
-                        Deleted = s.Deleted
+                        Deleted = s.Deleted,
+                        DeletePage = s.DeletePage,
                     }).ToList();
                     userPrivilege = userPrivilege.Where(x => x.Deleted != true).ToList();
 

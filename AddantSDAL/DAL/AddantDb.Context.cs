@@ -41,7 +41,7 @@ namespace AddantSDAL.DAL
         public virtual DbSet<Blog> Blogs { get; set; }
         public virtual DbSet<Candidate> Candidates { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<UserPrivilege> UserPrivileges { get; set; }
         public virtual DbSet<EventCategory> EventCategories { get; set; }
+        public virtual DbSet<UserPrivilege> UserPrivileges { get; set; }
     }
 }

@@ -228,6 +228,7 @@
     <Property Name="CreatedDate" Type="datetime" />
     <Property Name="StatusPage" Type="bit" />
     <Property Name="Deleted" Type="bit" />
+    <Property Name="DeletePage" Type="bit" />
   </EntityType>
   <EntityType Name="UserRole">
     <Key>
